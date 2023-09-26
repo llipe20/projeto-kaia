@@ -1,30 +1,47 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="container box-principal">
+    <HeaderQuiz />
+    <MainQuiz />
+    <FooterQuiz />
+  </div>
 </template>
 
+<script>
+import HeaderQuiz from './components/HeaderQuiz.vue'
+import MainQuiz from './components/MainQuiz.vue'
+import FooterQuiz from './components/FooterQuiz.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HeaderQuiz,
+    MainQuiz,
+    FooterQuiz
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-  padding: 30px;
+.container, body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.box-principal {
+  width: 100vw;
+  max-width: 800px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.496);
 }
 </style>
+
