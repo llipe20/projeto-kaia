@@ -42,6 +42,8 @@ export default {
   width: 100vw;
   max-width: 800px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.496);
+  border-left: 1px solid rgba(128, 128, 128, 0.322);
+  border-right: 1px solid rgba(128, 128, 128, 0.322);
 }
 </style>
 

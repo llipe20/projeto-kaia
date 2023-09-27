@@ -1,7 +1,9 @@
 <template>
    <div class="container">
         <div class="backdrop">
-            <!-- FUNDO DO QUIZ -->
+            <div class="gradiente">
+                <!-- FUNDO DO QUIZ -->
+            </div>
         </div>
         <div class="icon">
             <!-- ICONE DO QUIZ -->
@@ -48,6 +50,7 @@ export default {
 
     :root {
         --color-principal: rgb(1, 1, 152);
+        --branco: white;
     }
 
     .container {
@@ -61,8 +64,12 @@ export default {
         height: 250px;
     }
 
+    .gradiente {
+        width: 100%;
+        height: 100%;
+    }
+
     .icon {
-        background-color: white;
         width: 25vw;
         max-width: 180px;
         height: 25vw;
@@ -70,6 +77,7 @@ export default {
         border-radius: 50%;
         border: 5px solid rgb(1, 1, 152);
         position: absolute;
+        background-color: white;
         top: 160px;
     }
 
