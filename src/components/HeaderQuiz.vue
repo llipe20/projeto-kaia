@@ -16,12 +16,14 @@
 
         <InputName />
         <BottonStart />
+        <Ranking />
    </div>
 </template>
 
 <script>
 import InputName from './InputName.vue'
 import BottonStart from './Botton.vue'
+import Ranking from './ranking/Ranking.vue'
 
 export default {
     name : "HeaderQuiz",
@@ -33,7 +35,7 @@ export default {
     },
 
     components : {
-        InputName, BottonStart
+        InputName, BottonStart, Ranking
     },
 
     methods : {
