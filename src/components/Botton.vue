@@ -19,16 +19,18 @@ export default {
 
 <style scoped>
     button {
-        background-color: rgb(1, 1, 152);
+        background-color: rgb(1, 1, 102);
+        box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.553);
         color: white;
-        border-radius: 10px;
+        border-radius: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 5px;
         gap: 10px;
-        height: 60px;
-        width: 50%;
+        height: 80px;
+        width: 60%;
+        max-width: 300px;
         border: none;
         outline: none;
     }

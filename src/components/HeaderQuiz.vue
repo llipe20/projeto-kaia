@@ -1,5 +1,5 @@
 <template>
-   <div class="container">
+   <div class="container" id="circular">
         <div class="backdrop">
             <div class="gradiente">
                 <!-- FUNDO DO QUIZ -->
@@ -16,14 +16,14 @@
 
         <InputName />
         <BottonStart />
-        <Ranking />
+        
+        <h2>Ranking</h2>
    </div>
 </template>
 
 <script>
 import InputName from './InputName.vue'
 import BottonStart from './Botton.vue'
-import Ranking from './ranking/Ranking.vue'
 
 export default {
     name : "HeaderQuiz",
@@ -35,7 +35,7 @@ export default {
     },
 
     components : {
-        InputName, BottonStart, Ranking
+        InputName, BottonStart
     },
 
     methods : {
@@ -49,19 +49,18 @@ export default {
 </script>
 
 <style scoped>
-
     :root {
-        --color-principal: rgb(1, 1, 152);
-        --branco: white;
+        --cor-principal: rgb(1, 1, 152);
     }
 
     .container {
+        background: linear-gradient(to top, rgb(0, 0, 84), rgb(1, 1, 155), rgb(35, 35, 213));
         position: relative;
-        gap: 20px;
+        gap: 30px;
     }
 
     .backdrop {
-        background-color: rgb(1, 1, 152);
+        background-color: white;
         width: 100%;
         height: 250px;
     }
@@ -83,16 +82,19 @@ export default {
         top: 160px;
     }
 
-    h1 {
+    h1 , h2{
+        color: rgb(255, 255, 255);
         margin-top: 30px;
         font-size: 2.4em;
     }
 
     p {
+        color: rgba(255, 255, 255, 0.892);
         text-align: center;
         font-size: 1.2em;
         line-height: 1.5em;
-        padding: 0 20px;
+        padding: 0px 20px;
+        margin: 10px 0px;
 
     }
 

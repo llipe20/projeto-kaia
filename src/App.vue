@@ -1,6 +1,7 @@
 <template>
   <div class="container box-principal">
     <HeaderQuiz />
+    <RankIng />
     <MainQuiz />
     <FooterQuiz />
   </div>
@@ -10,18 +11,25 @@
 import HeaderQuiz from './components/HeaderQuiz.vue'
 import MainQuiz from './components/MainQuiz.vue'
 import FooterQuiz from './components/FooterQuiz.vue'
+import RankIng from './components/ranking/Ranking.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderQuiz,
     MainQuiz,
-    FooterQuiz
+    FooterQuiz,
+    RankIng 
   }
 }
 </script>
 
 <style>
+
+:root {
+  --color-principal: rgb(1, 1, 152);
+}
+
 
 * {
   margin: 0;
@@ -35,7 +43,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
 }
 
 .box-principal {
