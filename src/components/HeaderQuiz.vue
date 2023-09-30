@@ -5,8 +5,9 @@
                 <!-- FUNDO DO QUIZ -->
             </div>
         </div>
-        <div class="icon" style="background-image: url('/logo-kaia.png')">
+        <div class="icon">
             <!-- LOGO DO PROJETO -->
+            <img src="/logo-kaia.png" alt="logo" id="img-logo">
         </div>
         <h1>O quanto você sabe de gramática?</h1>
 
@@ -53,13 +54,13 @@ export default {
 <style scoped>
 
     .container {
-        background: linear-gradient(to top, rgb(1, 1, 84), rgb(1, 66, 130), rgb(1, 1, 186));
+        background-image: linear-gradient(to top, rgb(1, 1, 84), rgb(1, 66, 130), rgb(1, 1, 186));
         position: relative;
         gap: 30px;
     }
 
     .backdrop {
-        background-color: white;
+        background-color: red;
         background-size: cover;
         background-position: center center;
         width: 100%;
@@ -82,6 +83,11 @@ export default {
         background-color: white;
         top: 210px;
         background-position: 50% 50%;
+    }
+
+    #img-logo {
+        height: 100%;
+        width: 100%;
     }
 
     h1 , h2{

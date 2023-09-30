@@ -129,6 +129,15 @@ export default {
     }
 
     #img-primeiro {
-        margin-bottom: -80px ;
+        margin-bottom: -54px ;
+        width: 150%;
+        height: 150%;
+    }
+
+    @media (min-width: 800px) 
+    {
+        #img-primeiro {
+            margin-bottom: -80px ;
+        } 
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <input type="text" id="input-nome" placeholder="Insira seu nome">
+    <input type="text" id="input-nome" maxlength="20" placeholder="Insira seu nome">
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
     input {
         font: normal 1.2em var(--font-quiz);
         background-color: var(--cor-contraste);
-        box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.553);
+        box-shadow: 3px 3px .5px rgba(255, 255, 255, 0.553);
         color: white;
         text-align: center;
         border-radius: 15px;

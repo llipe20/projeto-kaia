@@ -20,7 +20,7 @@ export default {
 <style scoped>
     button {
         background-color: var(--cor-contraste);
-        box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.553);
+        box-shadow: 3px 3px .5px rgba(255, 255, 255, 0.553);
         color: white;
         border-radius: 15px;
         display: flex;

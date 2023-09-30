@@ -36,6 +36,15 @@ export default {
   --font-pergunta : 'Love Ya Like A Sister', cursive;
 }
 
+@keyframes degrade-anima
+{
+    0% {
+        background-position-y: 0%;
+    }
+    100% {
+          background-position-y: 100%;
+    }
+}
 
 * {
   margin: 0;
@@ -59,7 +68,6 @@ html::-webkit-scrollbar {
   width: 100vw;
   max-width: 800px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.496);
-  border: 2px solid rgba(128, 128, 128, 0.322);
 }
 </style>
 
