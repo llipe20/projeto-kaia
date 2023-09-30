@@ -33,7 +33,7 @@ export default {
         max-width: 300px;
         border: none;
         outline: none;
-        z-index: 2;
+        cursor: pointer;
     }
 
     h2 {

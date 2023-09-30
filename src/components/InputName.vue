@@ -23,6 +23,9 @@ export default {
         width: 60%;
         max-width: 300px;
         height: 70px;
-        z-index: 2;
+    }
+
+    ::placeholder {
+        color: white;
     }
 </style>

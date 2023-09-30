@@ -1,16 +1,14 @@
 <template>
    <div class="container" id="circular">
-        <div class="backdrop">
+        <div class="backdrop" style="background-image: url('/background1.jpg')">
             <div class="gradiente">
                 <!-- FUNDO DO QUIZ -->
-                <p style="color:var(--cor-principal)">[ IMAGEM DE FUNDO ]</p>
             </div>
         </div>
         <div class="icon">
             <!-- ICONE DO QUIZ -->
-            <p style="color:var(--cor-principal)">[ ICON ]</p>
         </div>
-        <h1>Quiz name</h1>
+        <h1>O quanto você sabe de gramática?</h1>
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.
@@ -54,31 +52,25 @@ export default {
 <style scoped>
 
     .container {
-        background: linear-gradient(to top, rgb(1, 1, 84), rgb(1, 66, 130), rgb(1, 66, 130), rgb(1, 1, 186));
+        background: linear-gradient(to top, rgb(1, 1, 84), rgb(1, 66, 130), rgb(1, 1, 186));
         position: relative;
         gap: 30px;
     }
 
     .backdrop {
         background-color: white;
+        background-size: cover;
+        background-position: center center;
         width: 100%;
-        height: 250px;
+        height: 300px;
     }
 
     .gradiente {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
         width: 100%;
         height: 100%;
     }
 
     .icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         width: 25vw;
         max-width: 180px;
         height: 25vw;
@@ -87,10 +79,11 @@ export default {
         border: 5px solid var(--cor-contraste);
         position: absolute;
         background-color: white;
-        top: 160px;
+        top: 210px;
     }
 
     h1 , h2{
+        text-align: center;
         color: rgb(255, 255, 255);
         margin-top: 30px;
         font: normal 2.4em var(--font-quiz);
@@ -115,19 +108,5 @@ export default {
         p {
             padding: 0 45px;
         }
-    }
-
-    #um, #dois {
-        position: absolute;
-        opacity: .1;
-        z-index: 0;
-        width: 100%;
-        left: 0%;
-        top: 92%;
-    }
-
-    #dois {
-        left: 0%;
-        top: 0%;
     }
 </style>

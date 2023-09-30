@@ -4,26 +4,26 @@
             <div class="podio container" id="segundo">
                 <p style="color:var(--cor-principal)">[ 2nd ]</p>
             </div>
-            <h3>Name player</h3>
-            <h4 id="time">1 min e 50 seg</h4>
-            <h4 id="pointer">500 pts</h4>
+            <h3>Neymar Jr.</h3>
+            <h4 id="time">1 min e 26 seg</h4>
+            <h4 id="pointer">12 pts</h4>
         </div>
          
          <div class="box-podio container" id="box-primeiro">
             <div class="podio container" id="primeiro">
                 <p style="color:var(--cor-principal)">[ 1st ]</p>
             </div>
-            <h3>Name player</h3>
-            <h4 id="time">1 min e 50 seg</h4>
-            <h4 id="pointer">500 pts</h4>
+            <h3>Robson da Silva Araújo</h3>
+            <h4 id="time">0 min e 50 seg</h4>
+            <h4 id="pointer">+ 8.000 pts</h4>
         </div>
 
         <div class="box-podio container" id="box-terceiro">
             <div class="podio container" id="terceiro">
                 <p style="color:var(--cor-principal)">[ 3rd ]</p>
             </div>
-            <h3>Name player</h3>
-            <h4 id="time">1 min e 50 seg</h4>
+            <h3>Satoru Gojo</h3>
+            <h4 id="time">2 min e 10 seg</h4>
             <h4 id="pointer">500 pts</h4>
         </div>
     </div>
@@ -60,7 +60,7 @@ export default {
 <style scoped>
 
     .box-ranking {
-        background: linear-gradient(to top,  rgb(35, 35, 213), rgb(21, 2, 129), rgb(0, 0, 99), rgb(0, 0, 84));
+        background: linear-gradient(to top, rgb(1, 66, 130), rgb(1, 1, 84));
         justify-content: space-evenly;
         align-content: flex-start;
         flex-direction: row;
