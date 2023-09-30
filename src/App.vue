@@ -44,6 +44,10 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 .container, body {
   display: flex;
   flex-direction: column;

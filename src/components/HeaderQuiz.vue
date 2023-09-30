@@ -20,7 +20,6 @@
         </div>
         
         <h2>Ranking</h2>
-
    </div>
 </template>
 
@@ -82,6 +81,7 @@ export default {
         position: absolute;
         background-color: white;
         top: 210px;
+        background-position: 50% 50%;
     }
 
     h1 , h2{
@@ -107,6 +107,7 @@ export default {
 
     .box-input {
         display: flex;
+        flex-direction: column;
         align-content: center;
         justify-content: center;
         height: auto;
@@ -116,6 +117,10 @@ export default {
 
      @media (min-width: 800px)
     {
+        .box-input {
+            flex-direction: row;
+        }
+
         h1 {
             margin-top: 95px;
         }

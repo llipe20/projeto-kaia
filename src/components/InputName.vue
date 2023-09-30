@@ -23,6 +23,14 @@ export default {
         width: 60%;
         max-width: 300px;
         height: 80px;
+        margin: auto;
+    }
+
+    @media (min-width: 800px)
+    {
+        input {
+            margin: 0;
+        }
     }
 
     ::placeholder {

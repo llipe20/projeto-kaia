@@ -34,6 +34,14 @@ export default {
         border: none;
         outline: none;
         cursor: pointer;
+        margin: auto;
+    }
+
+    @media (min-width: 800px)
+    {
+        button {
+            margin: 0;
+        }
     }
 
     h2 {
