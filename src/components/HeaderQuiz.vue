@@ -1,12 +1,12 @@
 <template>
    <div class="container" id="circular">
-        <div class="backdrop" style="background-image: url('/background1.jpg')">
+        <div class="backdrop">
             <div class="gradiente">
                 <!-- FUNDO DO QUIZ -->
+                <h1 style="color: black">[ IMAGEM DE FUNDO AQUI ]</h1>
             </div>
         </div>
         <div class="icon">
-            <!-- LOGO DO PROJETO -->
             <img src="/logo-kaia.png" alt="logo" id="img-logo">
         </div>
         <h1>O quanto você sabe de gramática?</h1>
@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import InputName from './InputName.vue'
-import BottonStart from './Botton.vue'
+import InputName from './headers/InputName.vue'
+import BottonStart from './headers/Botton.vue'
 
 export default {
     name : "HeaderQuiz",

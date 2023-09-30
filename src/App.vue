@@ -11,7 +11,7 @@
 import HeaderQuiz from './components/HeaderQuiz.vue'
 import MainQuiz from './components/MainQuiz.vue'
 import FooterQuiz from './components/FooterQuiz.vue'
-import RankIng from './components/ranking/Ranking.vue'
+import RankIng from './components/headers/Ranking.vue'
 
 export default {
   name: 'App',
