@@ -47,4 +47,8 @@ export default {
     h2 {
         font: normal 1.8em var(--font-quiz);
     }
+
+    button:hover {
+        background-color: var(--cor-secundaria);
+    }
 </style>

@@ -61,6 +61,7 @@ export default {
     }
 
     .table {
+        font-family: var(--font-quiz);
         border-collapse: collapse;
         height: auto;
         width: 90%;
@@ -70,7 +71,7 @@ export default {
 
     /* Linha */
     tr {
-        font: normal 1.2em sans-serif;
+        font: normal 1.2em var(--font-pergunta);
         margin-bottom: 5px;
         height: 60px;
         width: 100%;

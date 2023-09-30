@@ -1,0 +1,24 @@
+{
+    "paleta" : [
+        {
+            "principal" : "rgb(1, 66, 130)",
+            "secundaria" : "rgb(1, 1, 186)",
+            "contraste" : "rgb(1, 1, 84)"
+        },
+        {
+            "principal" : "rgb(253, 30, 30)",
+            "secundaria" : "rgb(186, 1, 1)",
+            "contraste" : "rgb(100, 0, 0)"
+        },
+        {
+            "principal" : "rgb(0, 232, 70)",
+            "secundaria" : "rgb(1, 186, 1)",
+            "contraste" : "rgb(0, 100, 0)"
+        },
+        {
+            "principal" : "rgb(223, 215, 1)",
+            "secundaria" : "rgb(206, 1, 1)",
+            "contraste" : "rgb(207, 155, 0)"
+        }
+    ]
+}
