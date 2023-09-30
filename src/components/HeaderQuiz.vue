@@ -11,11 +11,8 @@
         </div>
         <h1>O quanto você sabe de gramática?</h1>
 
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.
-        </p>
-
         <div class="box-input">
+            <Tutorial-quiz />
             <InputName />
             <BottonStart />
         </div>
@@ -25,6 +22,7 @@
 </template>
 
 <script>
+import TutorialQuiz from './headers/Tutorial.vue'
 import InputName from './headers/InputName.vue'
 import BottonStart from './headers/Botton.vue'
 
@@ -38,7 +36,7 @@ export default {
     },
 
     components : {
-        InputName, BottonStart
+        InputName, BottonStart, TutorialQuiz
     },
 
     methods : {
@@ -95,7 +93,7 @@ export default {
         text-align: center;
         color: rgb(255, 255, 255);
         margin-top: 30px;
-        font: normal 2.4em var(--font-quiz);
+        font: normal 2em var(--font-quiz);
     }
 
     h2 {
@@ -105,14 +103,6 @@ export default {
         outline: 4px solid var(--cor-principal);
         border-radius: 15px;
         padding: 10px;
-    }
-
-    p {
-        color: rgba(255, 255, 255, 0.892);
-        text-align: center;
-        font: normal 1.3em var(--font-pergunta);
-        line-height: 1.5em;
-        padding: 20px;
     }
 
     .box-input {

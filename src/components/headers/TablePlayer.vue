@@ -71,6 +71,7 @@ export default {
 
     /* Linha */
     tr {
+        border: 3px solid rgba(255, 255, 255, 0.553);
         font: normal 1.2em var(--font-pergunta);
         margin-bottom: 5px;
         height: 60px;
@@ -80,12 +81,10 @@ export default {
 
     .alternar {
         background-image: linear-gradient(to left, var(--cor-principal), var(--cor-contraste));
-        box-shadow: .5px .5px 2px var(--cor-contraste);
     }
 
     .header {
-         background-color: var(--cor-contraste);
-         box-shadow: .5px .5px 2px var(--cor-principal);
+        background-color: var(--cor-contraste);
     }
 
     /* Coluna */
