@@ -1,31 +1,33 @@
 <template>
-    <div class="container box-ranking">
-        <div class="box-podio container" id="box-segundo">
-            <div class="podio container" id="segundo">
-                <p style="color:var(--cor-principal)">[ 2nd ]</p>
+    <div class="box-circular">
+        <div class="container box-ranking">
+            <div class="box-podio container" id="box-segundo">
+                <div class="podio container" id="segundo">
+                
+                </div>
+                <h3>Neymar Jr.</h3>
+                <h4 id="time">26 seg</h4>
+                <h4 id="pointer">220 pts</h4>
             </div>
-            <h3>Neymar Jr.</h3>
-            <h4 id="time">1 min e 26 seg</h4>
-            <h4 id="pointer">12 pts</h4>
-        </div>
-         
-         <div class="box-podio container" id="box-primeiro">
-            <div class="podio container" id="primeiro">
-                <img src="/first-prize.png" alt="primeiro lugar" id="img-primeiro">
+            
+            <div class="box-podio container" id="box-primeiro">
+                <div class="podio container" id="primeiro">
+                    <img src="/first-prize.png" alt="primeiro lugar" id="img-primeiro">
+                </div>
+                <h3 id="name-primeiro">Robson da Silva Araújo</h3>
+                <h4 id="time">501 seg</h4>
+                <h4 id="pointer">+ 8.000 pts</h4>
             </div>
-            <h3 id="name-primeiro">Robson da Silva Araújo</h3>
-            <h4 id="time">0 min e 50 seg</h4>
-            <h4 id="pointer">+ 8.000 pts</h4>
-        </div>
 
-        <div class="box-podio container" id="box-terceiro">
-            <div class="podio container" id="terceiro">
-               
+            <div class="box-podio container" id="box-terceiro">
+                <div class="podio container" id="terceiro">
+                
+                </div>
+                <h3>Satoru Gojo</h3>
+                <h4 id="time">110 seg</h4>
+                <h4 id="pointer">500 pts</h4>
             </div>
-            <h3>Satoru Gojo</h3>
-            <h4 id="time">2 min e 10 seg</h4>
-            <h4 id="pointer">500 pts</h4>
-        </div>
+        </div>   
     </div>
 
     <TablePlayer />
@@ -59,15 +61,16 @@ export default {
 
 <style scoped>
 
-    .box-ranking {
-        background: linear-gradient(to top, rgb(1, 66, 130), rgb(1, 1, 84));
+    .box-ranking, .box-circular {
+        display: flex;
+        background: linear-gradient(to top, var(--cor-principal), var(--cor-contraste));
         justify-content: space-evenly;
         align-content: flex-start;
         flex-direction: row;
-        border-radius: 0px 0px 50% 50%;
+        border-radius: 0px 0px 100% 100%;
         height: auto;
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .box-podio {

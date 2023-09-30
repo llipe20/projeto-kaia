@@ -54,13 +54,14 @@ export default {
 <style scoped>
 
     .container {
-        background-image: linear-gradient(to top, rgb(1, 1, 84), rgb(1, 66, 130), rgb(1, 1, 186));
+        background-image: linear-gradient(to top, var(--cor-contraste), var(--cor-principal), var(--cor-secundaria));
         position: relative;
         gap: 30px;
+        overflow-x: hidden;
     }
 
     .backdrop {
-        background-color: red;
+        background-color: white;
         background-size: cover;
         background-position: center center;
         width: 100%;
@@ -98,7 +99,7 @@ export default {
     }
 
     h2 {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     p {
