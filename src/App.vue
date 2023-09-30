@@ -26,8 +26,11 @@ export default {
 
 <style>
 
+  @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 :root {
   --color-principal: rgb(1, 1, 152);
+  --font-quiz : 'Luckiest Guy', cursive;
 }
 
 

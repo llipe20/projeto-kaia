@@ -51,6 +51,7 @@ export default {
 <style scoped>
     :root {
         --cor-principal: rgb(1, 1, 152);
+         --font-quiz : 'Luckiest Guy', cursive;
     }
 
     .container {
@@ -85,7 +86,7 @@ export default {
     h1 , h2{
         color: rgb(255, 255, 255);
         margin-top: 30px;
-        font-size: 2.4em;
+        font: normal 2.4em var(--font-quiz);
     }
 
     p {
