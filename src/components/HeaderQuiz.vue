@@ -99,7 +99,12 @@ export default {
     }
 
     h2 {
-        margin-bottom: 20px;
+        width: 77%;
+        margin-bottom: 30px;
+        border-bottom: 4px solid var(--cor-principal);
+        outline: 4px solid var(--cor-principal);
+        border-radius: 15px;
+        padding: 10px;
     }
 
     p {
@@ -107,9 +112,7 @@ export default {
         text-align: center;
         font: normal 1.3em var(--font-pergunta);
         line-height: 1.5em;
-        padding: 0px 20px;
-        margin: 10px 0px;
-
+        padding: 20px;
     }
 
     .box-input {
@@ -133,7 +136,7 @@ export default {
         }
 
         p {
-            padding: 0 45px;
+            padding: 20px 45px;
         }
     }
 </style>

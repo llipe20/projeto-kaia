@@ -12,7 +12,7 @@
             </tr>
             <tr>
                 <td>4th</td>
-                <td>Robson da Silva Araújo</td>
+                <td>Mahoraga</td>
                 <td>50 seg</td>
                 <td>8000</td>
             </tr>

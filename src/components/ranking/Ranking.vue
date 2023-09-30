@@ -1,5 +1,4 @@
 <template>
-    <div class="box-circular">
         <div class="container box-ranking">
             <div class="box-podio container" id="box-segundo">
                 <div class="podio container" id="segundo">
@@ -28,8 +27,6 @@
                 <h4 id="pointer">500 pts</h4>
             </div>
         </div>   
-    </div>
-
     <TablePlayer />
 </template>
 
@@ -61,13 +58,14 @@ export default {
 
 <style scoped>
 
-    .box-ranking, .box-circular {
+    .box-ranking {
         display: flex;
         background: linear-gradient(to top, var(--cor-principal), var(--cor-contraste));
         justify-content: space-evenly;
         align-content: flex-start;
         flex-direction: row;
         border-radius: 0px 0px 100% 100%;
+        border-bottom: 10px solid var(--cor-contraste);
         height: auto;
         width: 100%;
         padding-bottom: 10px;
