@@ -11,16 +11,16 @@
          
          <div class="box-podio container" id="box-primeiro">
             <div class="podio container" id="primeiro">
-                <p style="color:var(--cor-principal)">[ 1st ]</p>
+                <img src="/first-prize.png" alt="primeiro lugar" id="img-primeiro">
             </div>
-            <h3>Robson da Silva Araújo</h3>
+            <h3 id="name-primeiro">Robson da Silva Araújo</h3>
             <h4 id="time">0 min e 50 seg</h4>
             <h4 id="pointer">+ 8.000 pts</h4>
         </div>
 
         <div class="box-podio container" id="box-terceiro">
             <div class="podio container" id="terceiro">
-                <p style="color:var(--cor-principal)">[ 3rd ]</p>
+               
             </div>
             <h3>Satoru Gojo</h3>
             <h4 id="time">2 min e 10 seg</h4>
@@ -78,10 +78,6 @@ export default {
         gap: 10px;
     }
 
-    #box-primeiro {
-        margin-top: 80px;
-    }
-
     #box-segundo, #box-terceiro {
         margin-bottom: 80px;
     }
@@ -94,6 +90,10 @@ export default {
         max-width: 180px;
         height: 25vw;
         max-height: 180px;
+    }
+
+    #primeiro {
+        margin-bottom: -22px;
     }
 
     #segundo, #terceiro {
@@ -115,6 +115,10 @@ export default {
         color: white;
     }
 
+    #name-primeiro {
+        margin-top: 100px;
+    }
+
     h4 {
         font-size: 1.2em;
     }
@@ -122,5 +126,9 @@ export default {
     #pointer {
         font: normal 1.4em var(--font-quiz);
         color: green;
+    }
+
+    #img-primeiro {
+        margin-bottom: -80px ;
     }
 </style>

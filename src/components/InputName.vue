@@ -1,5 +1,5 @@
 <template>
-    <input type="text" id="input-nome" placeholder="Insira seu nome" autofocus>
+    <input type="text" id="input-nome" placeholder="Insira seu nome">
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
         outline: none;
         width: 60%;
         max-width: 300px;
-        height: 70px;
+        height: 80px;
     }
 
     ::placeholder {

@@ -5,8 +5,8 @@
                 <!-- FUNDO DO QUIZ -->
             </div>
         </div>
-        <div class="icon">
-            <!-- ICONE DO QUIZ -->
+        <div class="icon" style="background-image: url('/logo-kaia.png')">
+            <!-- LOGO DO PROJETO -->
         </div>
         <h1>O quanto você sabe de gramática?</h1>
 
@@ -14,8 +14,10 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.
         </p>
 
-        <InputName />
-        <BottonStart />
+        <div class="box-input">
+            <InputName />
+            <BottonStart />
+        </div>
         
         <h2>Ranking</h2>
 
@@ -76,7 +78,7 @@ export default {
         height: 25vw;
         max-height: 180px;
         border-radius: 50%;
-        border: 5px solid var(--cor-contraste);
+        border: 5px solid white;
         position: absolute;
         background-color: white;
         top: 210px;
@@ -89,6 +91,10 @@ export default {
         font: normal 2.4em var(--font-quiz);
     }
 
+    h2 {
+        margin-bottom: 10px;
+    }
+
     p {
         color: rgba(255, 255, 255, 0.892);
         text-align: center;
@@ -97,6 +103,15 @@ export default {
         padding: 0px 20px;
         margin: 10px 0px;
 
+    }
+
+    .box-input {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        gap: 20px;
     }
 
      @media (min-width: 800px)
