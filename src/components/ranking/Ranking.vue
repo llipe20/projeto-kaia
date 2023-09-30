@@ -1,21 +1,27 @@
 <template>
     <div class="container box-ranking">
         <div class="box-podio container" id="box-segundo">
-            <div class="podio container" id="segundo"></div>
+            <div class="podio container" id="segundo">
+                <p style="color:var(--cor-principal)">[ 2nd ]</p>
+            </div>
             <h3>Name player</h3>
             <h4 id="time">1 min e 50 seg</h4>
             <h4 id="pointer">500 pts</h4>
         </div>
          
          <div class="box-podio container" id="box-primeiro">
-            <div class="podio container" id="primeiro"></div>
+            <div class="podio container" id="primeiro">
+                <p style="color:var(--cor-principal)">[ 1st ]</p>
+            </div>
             <h3>Name player</h3>
             <h4 id="time">1 min e 50 seg</h4>
             <h4 id="pointer">500 pts</h4>
         </div>
 
         <div class="box-podio container" id="box-terceiro">
-            <div class="podio container" id="terceiro"></div>
+            <div class="podio container" id="terceiro">
+                <p style="color:var(--cor-principal)">[ 3rd ]</p>
+            </div>
             <h3>Name player</h3>
             <h4 id="time">1 min e 50 seg</h4>
             <h4 id="pointer">500 pts</h4>
@@ -54,7 +60,7 @@ export default {
 <style scoped>
 
     .box-ranking {
-        background: linear-gradient(to top,  rgb(35, 35, 213), rgb(0, 0, 84));
+        background: linear-gradient(to top,  rgb(35, 35, 213), rgb(21, 2, 129), rgb(0, 0, 99), rgb(0, 0, 84));
         justify-content: space-evenly;
         align-content: flex-start;
         flex-direction: row;
@@ -69,7 +75,7 @@ export default {
         padding: 10px;
         width: 30vw;
         max-width: 250px;
-        gap: 20px;
+        gap: 10px;
     }
 
     #box-primeiro {
@@ -103,12 +109,18 @@ export default {
     }
 
     h3, h4 {
-        font: normal 1.5em Arial, sans-serif;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.386);
+        font: normal 1.5em var(--font-pergunta);
         text-align: center;
         color: white;
     }
 
     h4 {
-        font-size: 1.1em;
+        font-size: 1.2em;
+    }
+
+    #pointer {
+        font: normal 1.4em var(--font-quiz);
+        color: green;
     }
 </style>

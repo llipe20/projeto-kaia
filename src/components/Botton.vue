@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
     button {
-        background-color: rgb(1, 1, 102);
+        background-color: var(--cor-contraste);
         box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.553);
         color: white;
         border-radius: 15px;
@@ -33,9 +33,10 @@ export default {
         max-width: 300px;
         border: none;
         outline: none;
+        z-index: 2;
     }
 
     h2 {
-        font: normal 1.8em Arial, sans-serif;
+        font: normal 1.8em var(--font-quiz);
     }
 </style>

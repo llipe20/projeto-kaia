@@ -3,10 +3,12 @@
         <div class="backdrop">
             <div class="gradiente">
                 <!-- FUNDO DO QUIZ -->
+                <p style="color:var(--cor-principal)">[ IMAGEM DE FUNDO ]</p>
             </div>
         </div>
         <div class="icon">
             <!-- ICONE DO QUIZ -->
+            <p style="color:var(--cor-principal)">[ ICON ]</p>
         </div>
         <h1>Quiz name</h1>
 
@@ -18,6 +20,7 @@
         <BottonStart />
         
         <h2>Ranking</h2>
+
    </div>
 </template>
 
@@ -49,13 +52,9 @@ export default {
 </script>
 
 <style scoped>
-    :root {
-        --cor-principal: rgb(1, 1, 152);
-         --font-quiz : 'Luckiest Guy', cursive;
-    }
 
     .container {
-        background: linear-gradient(to top, rgb(0, 0, 84), rgb(1, 1, 155), rgb(35, 35, 213));
+        background: linear-gradient(to top, rgb(1, 1, 84), rgb(1, 66, 130), rgb(1, 66, 130), rgb(1, 1, 186));
         position: relative;
         gap: 30px;
     }
@@ -67,17 +66,25 @@ export default {
     }
 
     .gradiente {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
         width: 100%;
         height: 100%;
     }
 
     .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         width: 25vw;
         max-width: 180px;
         height: 25vw;
         max-height: 180px;
         border-radius: 50%;
-        border: 5px solid rgb(1, 1, 152);
+        border: 5px solid var(--cor-contraste);
         position: absolute;
         background-color: white;
         top: 160px;
@@ -92,7 +99,7 @@ export default {
     p {
         color: rgba(255, 255, 255, 0.892);
         text-align: center;
-        font-size: 1.2em;
+        font: normal 1.3em var(--font-pergunta);
         line-height: 1.5em;
         padding: 0px 20px;
         margin: 10px 0px;
@@ -108,5 +115,19 @@ export default {
         p {
             padding: 0 45px;
         }
+    }
+
+    #um, #dois {
+        position: absolute;
+        opacity: .1;
+        z-index: 0;
+        width: 100%;
+        left: 0%;
+        top: 92%;
+    }
+
+    #dois {
+        left: 0%;
+        top: 0%;
     }
 </style>
