@@ -24,7 +24,7 @@ export default {
         font: normal 2em var(--font-quiz);
         text-align: center;
         width: 90%;
-        margin: 30px 0px;
+        margin: 30px 0px 20px 0px;
         border-radius: 15px;
         padding: 20px;
     }
