@@ -12,4 +12,20 @@ export default {
 
 <style scoped>
 
+    #box-pergunta {
+        padding: 0;
+    }
+
+    h2 {        
+        border-bottom: 4px solid rgba(255, 255, 255, 0.553);
+        outline: 3px solid rgba(255, 255, 255, 0.553);
+        background-color: var(--cor-contraste);
+        color: rgb(255, 255, 255);
+        font: normal 2em var(--font-quiz);
+        text-align: center;
+        width: 90%;
+        margin: 30px 0px;
+        border-radius: 15px;
+        padding: 20px;
+    }
 </style>
