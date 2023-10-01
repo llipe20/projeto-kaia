@@ -12,7 +12,7 @@
         <h1>O quanto você sabe de gramática?</h1>
         
         <Tutorial-quiz />
-        
+
         <div class="box-input">
             <InputName />
             <BottonStart />
@@ -57,6 +57,7 @@ export default {
         position: relative;
         gap: 30px;
         overflow-x: hidden;
+        width: 100%;
     }
 
     .backdrop {

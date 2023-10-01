@@ -1,10 +1,10 @@
 <template>
-    <div class="content">
-        <div class="content invisible">
+    <div class="contenter">
+        <div class="contenter">
             <button>
                 Descrição
             </button>
-            <div class="content box" id="box-desc">
+            <div class="contenter box invisible" id="box-desc">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.
                 </p>
@@ -12,7 +12,7 @@
             <button>
                 Como Jogar
             </button>
-            <ul class="content box" id="box-passo-passo">
+            <ul class="contenter box invisible" id="box-passo-passo">
                 <li>
                     1 - Insira seu nome no campo abaixo e aperte em "Jogar".
                 </li>
@@ -33,7 +33,6 @@
                 </li>
             </ul>
         </div>
-
     </div>
 </template>
 
@@ -61,17 +60,14 @@ export default {
 
 <style scoped>
 
-    .invisible {
-        display: none;
-    }
-
-    .content {
+    .contenter {
         background-color: transparent;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 10px;
+        width: 100%;
         gap: 20px;
     }
 
@@ -89,7 +85,7 @@ export default {
         border-radius: 15px;
         padding: 10px;
         width: 60%;
-        margin-top: 15px;
+        margin-top: 5px;
         cursor: pointer;
     }
 
@@ -100,7 +96,11 @@ export default {
         font: normal 1.3em var(--font-pergunta);
         line-height: 1.5em;
         padding: 0 20px;
-        max-width: 85%;
+        max-width: 90%;
+    }
+
+    .invisible {
+        display: none;
     }
 
     @media (min-width: 800px)

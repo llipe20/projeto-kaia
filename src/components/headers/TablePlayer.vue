@@ -72,7 +72,7 @@ export default {
     /* Linha */
     tr {
         border: 3px solid rgba(255, 255, 255, 0.553);
-        font: normal 1.2em var(--font-pergunta);
+        font: normal 1.3em var(--font-pergunta);
         margin-bottom: 5px;
         height: 60px;
         width: 100%;
