@@ -16,6 +16,7 @@ export default {
 <style scoped>
 
     #box-alternativas {
+        height: 400px;
         gap: 15px;
     }
 
@@ -24,7 +25,7 @@ export default {
         outline: 3px solid rgba(255, 255, 255, 0.553);
         background-color: var(--cor-secundaria);
         color: rgb(255, 255, 255);
-        font: normal 2em var(--font-quiz);
+        font: normal 1.7em var(--font-quiz);
         text-align: center;
         width: 90%;
         border-radius: 15px;

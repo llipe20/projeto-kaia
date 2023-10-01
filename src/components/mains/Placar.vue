@@ -77,8 +77,9 @@ export default {
     }
 
     p, span {
-        font-size: 1.3em;
+        font-size: 1.1em;
         max-width: 80%;
+        padding-top: 20px;
     }
 
     span {
@@ -88,8 +89,16 @@ export default {
         border: 4px solid white;
         animation: mover-anima .5s infinite alternate;
         position: absolute;
-        left: 91%;
-        top: 8%;
+        padding: 0;
+        left: 90%;
+        top: 45%;
+    }
+
+    @media (min-width: 800px) 
+    {
+        p, span {
+            font-size: 1.3em;     
+        }   
     }
 
     button {
