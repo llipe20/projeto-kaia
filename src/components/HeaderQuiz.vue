@@ -113,8 +113,9 @@ export default {
         align-content: center;
         justify-content: center;
         height: auto;
+        margin-top: -10px;
         width: 100%;
-        gap: 20px;
+        gap: 30px;
     }
 
      @media (min-width: 800px)

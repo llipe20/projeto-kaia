@@ -1,8 +1,16 @@
 <template>
-    <h1>MAIN AQUI</h1>
+    <div class="container" id="fundo">
+        <PerguntaQuiz />
+        <RespostaQuiz />
+        <PlacarQuiz />
+    </div>
 </template>
 
 <script>
+import PerguntaQuiz from './mains/Pergunta.vue'
+import RespostaQuiz from './mains/Resposta.vue'
+import PlacarQuiz from './mains/Placar'
+
 export default {
     name : "MainQuiz",
 
@@ -13,7 +21,7 @@ export default {
     },
 
     components : {
-
+        PerguntaQuiz, RespostaQuiz, PlacarQuiz
     },
 
     methods : {
@@ -25,3 +33,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .container {
+        height: 500px;
+        width: 100%;
+    }
+
+    #fundo {
+        background-image: linear-gradient(to top, var(--cor-contraste), var(--cor-principal));
+    }
+</style>
