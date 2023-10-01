@@ -20,7 +20,9 @@ export default {
 <style scoped>
     button {
         background-color: var(--cor-contraste);
-        box-shadow: 3px 3px .5px rgba(255, 255, 255, 0.553);
+        border: none;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.553);
+        outline: 3px solid rgba(255, 255, 255, 0.553);
         color: white;
         border-radius: 15px;
         display: flex;
@@ -31,8 +33,6 @@ export default {
         height: 80px;
         width: 60%;
         max-width: 300px;
-        border: none;
-        outline: none;
         cursor: pointer;
         margin: auto;
     }
@@ -42,13 +42,13 @@ export default {
         button {
             margin: 0;
         }
+
+        button:hover {
+            background-color: var(--cor-secundaria);
+        }
     }
 
     h2 {
         font: normal 1.8em var(--font-quiz);
-    }
-
-    button:hover {
-        background-color: var(--cor-secundaria);
     }
 </style>

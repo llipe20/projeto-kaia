@@ -20,5 +20,19 @@
             "secundaria" : "rgb(206, 1, 1)",
             "contraste" : "rgb(207, 155, 0)"
         }
+    ],
+
+    "tutorial" : [
+        "1 - Insira seu nome no campo abaixo e aperte em 'Jogar'.",
+
+        "2 - Leia as perguntas com atenção e aperte na alternativa que achar correta.",
+
+        "3 - Caso não saiba a resposta, aguarde 10 segundos e o jogo lhe dará uma dica para auxiliar.",
+
+        "4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies.",
+
+        "5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo.",
+
+        "Boa sorte!"
     ]
 }

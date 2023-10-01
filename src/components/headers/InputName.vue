@@ -13,13 +13,13 @@ export default {
     input {
         font: normal 1.2em var(--font-quiz);
         background-color: var(--cor-contraste);
-        box-shadow: 3px 3px .5px rgba(255, 255, 255, 0.553);
+        border: none;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.553);
+        outline: 3px solid rgba(255, 255, 255, 0.553);
         color: white;
         text-align: center;
         border-radius: 15px;
         padding: 5px 10px;
-        border: none;
-        outline: none;
         width: 60%;
         max-width: 300px;
         height: 80px;

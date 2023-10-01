@@ -1,15 +1,36 @@
 <template>
     <div class="content">
         <div class="content invisible">
-            <h3 id="botton-desc">Descrição</h3>
+            <button>
+                Descrição
+            </button>
             <div class="content box" id="box-desc">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.
                 </p>
             </div>
-            <h3 id="botton-passo-passo">Como jogar</h3>
+            <button>
+                Como Jogar
+            </button>
             <ul class="content box" id="box-passo-passo">
-                <li>1. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa corporis explicabo ratione dignissimos pariatur earum optio eius alias nulla blanditiis. Adipisci dolores nihil repellendus reiciendis necessitatibus veritatis quis ipsum minus!</li>
+                <li>
+                    1 - Insira seu nome no campo abaixo e aperte em "Jogar".
+                </li>
+                <li>
+                    2 - Leia as perguntas com atenção e aperte na alternativa que achar correta. 
+                </li>
+                <li>
+                    3 - Caso não saiba a resposta, aguarde 10 segundos e o jogo lhe dará uma dica para auxiliar. 
+                </li>
+                <li>
+                    4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies. 
+                </li>
+                <li>
+                    5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo. 
+                </li>
+                <li>
+                    Boa sorte!
+                </li>
             </ul>
         </div>
 
@@ -39,36 +60,53 @@ export default {
 </script>
 
 <style scoped>
+
+    .invisible {
+        display: none;
+    }
+
     .content {
         background-color: transparent;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        padding: 10px;
+        gap: 20px;
     }
 
     .box {
-        gap: 10px;
+        gap: 25px;
     }
 
-    h3 {
-        text-align: center;
+    button {
+        background-color: transparent;
         color: rgb(255, 255, 255);
         font: normal 2em var(--font-quiz);
+        border: none;
         border-bottom: 4px solid var(--cor-contraste);
         outline: 4px solid var(--cor-contraste);
         border-radius: 15px;
         padding: 10px;
         width: 60%;
         margin-top: 15px;
+        cursor: pointer;
     }
 
-    p {
+    p, li {
+        list-style-type: none;
         color: rgba(255, 255, 255, 0.892);
         text-align: center;
         font: normal 1.3em var(--font-pergunta);
         line-height: 1.5em;
-        padding: 20px;
+        padding: 0 20px;
+        max-width: 85%;
+    }
+
+    @media (min-width: 800px)
+    {
+        button:hover {
+            background-color: var(--cor-secundaria);
+        }
     }
 </style>

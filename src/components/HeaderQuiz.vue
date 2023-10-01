@@ -10,9 +10,10 @@
             <img src="/logo-kaia.png" alt="logo" id="img-logo">
         </div>
         <h1>O quanto você sabe de gramática?</h1>
-
+        
+        <Tutorial-quiz />
+        
         <div class="box-input">
-            <Tutorial-quiz />
             <InputName />
             <BottonStart />
         </div>
