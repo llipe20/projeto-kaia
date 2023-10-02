@@ -2,13 +2,16 @@
    <div class="container" id="circular">
         <div class="backdrop">
             <div class="gradiente">
-                <!-- FUNDO DO QUIZ -->
                 <h1 style="color: black">[ IMAGEM DE FUNDO AQUI ]</h1>
             </div>
         </div>
+
+        <!-- LOGO -->
         <div class="icon">
             <img src="/logo-kaia.png" alt="logo" id="img-logo">
         </div>
+
+        <!-- TITLE QUIZ -->
         <h1>O quanto você sabe de gramática?</h1>
         
         <Tutorial-quiz />

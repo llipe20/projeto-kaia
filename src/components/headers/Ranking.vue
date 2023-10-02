@@ -2,7 +2,7 @@
         <div class="container box-ranking">
             <div class="box-podio container" id="box-segundo">
                 <div class="podio container" id="segundo">
-                
+                    <!-- ICON PODIO -->
                 </div>
                 <h3>Neymar Jr.</h3>
                 <h4 id="time">26 seg</h4>
@@ -20,7 +20,7 @@
 
             <div class="box-podio container" id="box-terceiro">
                 <div class="podio container" id="terceiro">
-                
+                    <!-- ICON PODIO -->
                 </div>
                 <h3>Satoru Gojo</h3>
                 <h4 id="time">110 seg</h4>
