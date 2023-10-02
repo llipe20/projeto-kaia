@@ -91,6 +91,7 @@ export default {
         max-width: 180px;
         height: 25vw;
         max-height: 180px;
+        animation: mahoraga 3s infinite alternate;
     }
 
     #primeiro {

@@ -1,5 +1,5 @@
 <template>
-    <input type="text" id="input-nome" maxlength="20" placeholder="Insira seu nome">
+    <input type="text" id="input-nome" maxlength="20" placeholder="seu nome" autofocus>
 </template>
 
 <script>
@@ -11,16 +11,16 @@ export default {
 <style scoped>
 
     input {
-        font: normal 1.2em var(--font-quiz);
-        background-color: var(--cor-contraste);
+        font: normal 1.8em var(--font-quiz);
+        background-color: transparent;
         border: none;
-        border-bottom: 4px solid rgba(255, 255, 255, 0.553);
-        outline: 3px solid rgba(255, 255, 255, 0.553);
+        border-bottom: 4px solid var(--cor-contraste);
+        outline: 4px solid var(--cor-contraste);
         color: white;
         text-align: center;
         border-radius: 15px;
         padding: 5px 10px;
-        width: 60%;
+        width: 55%;
         max-width: 300px;
         height: 80px;
         margin: auto;

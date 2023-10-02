@@ -2,12 +2,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <button>
-        <span class="material-symbols-outlined">
-            play_arrow
-        </span>
-        <h2>
-            Jogar
-        </h2>
+        Jogar
     </button>
 </template>
 
@@ -18,11 +13,12 @@ export default {
 </script>
 
 <style scoped>
+
     button {
-        background-color: var(--cor-contraste);
+        background-color: var(--cor-secundaria);
         border: none;
-        border-bottom: 4px solid rgba(255, 255, 255, 0.553);
-        outline: 3px solid rgba(255, 255, 255, 0.553);
+        border-bottom: 4px solid var(--cor-contraste);
+        outline: 4px solid var(--cor-contraste);
         color: white;
         border-radius: 15px;
         display: flex;
@@ -35,6 +31,8 @@ export default {
         max-width: 300px;
         cursor: pointer;
         margin: auto;
+        font: normal 2em var(--font-quiz);
+        animation: mahoraga .5s infinite alternate;
     }
 
     @media (min-width: 800px)
@@ -42,13 +40,5 @@ export default {
         button {
             margin: 0;
         }
-
-        button:hover {
-            background-color: var(--cor-secundaria);
-        }
-    }
-
-    h2 {
-        font: normal 1.8em var(--font-quiz);
     }
 </style>

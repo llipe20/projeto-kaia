@@ -60,13 +60,12 @@ export default {
   --font-pergunta: 'Love Ya Like A Sister', cursive;
 }
 
-@keyframes degrade-anima
-{
+@keyframes mahoraga {
     0% {
-        background-position-y: 0%;
+        transform: scale(.95);
     }
     100% {
-          background-position-y: 100%;
+        transform: scale(1);
     }
 }
 

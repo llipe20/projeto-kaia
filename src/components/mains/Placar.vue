@@ -1,24 +1,35 @@
 <template>
     <div class="container">
         <div class="container" id="box-placar">
-            <div class="container" id="box-logo">
-                <img src="/logo-kaia.png" alt="logo-kaia" id="logo">
-                <h3>2/15</h3>
+
+            <!-- VALOR PONTO -->
+            <div class="container ponto">
+                <h3>Valendo</h3>
+                <h3>+ 15 pts</h3>
             </div>
+
+            <!-- SOMATÓRIO -->
             <div class="container">
-                <img src="/money.png" alt="pontos">
-                <h3>15 pts</h3>
+                <img src="/imgs/money.png" alt="pontos">
+                <h3>120 pts</h3>
             </div>
-            
+
+            <!-- TEMPO -->
             <div class="container">
-                <img src="/clock.png" alt="tempo">
+                <img src="/imgs/clock.png" alt="tempo">
                 <h3>120 seg</h3>
             </div>
             
-            <button>
-                <h3 style="color: white;">Dica</h3>
-            </button>
+            <!-- DICA -->
+            <div class="container">
+                <button>
+                    <img src="/imgs/logo-kaia.png" alt="logo-kaia" id="logo">
+                </button>
+                <h3>Dica</h3>
+            </div>
         </div>
+
+        <!-- BOX - DICA // escondido inicialmente -->
         <div class="container invisible" id="box-dica">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nesciunt deleniti aliquid blanditiis nisi aut sunt
@@ -59,7 +70,6 @@ export default {
         border-radius: 50% 50% 0 0;
         padding: 30px 20px 20px 20px;
         height: 150px;
-        margin-top: 10px;
     }        
 
     #box-dica {
@@ -104,17 +114,16 @@ export default {
     button {
         background-color: var(--cor-secundaria);
         border: none;
-        border-bottom: 4px solid var(--cor-contraste);
-        outline: 3px solid var(--cor-contraste);
         color: white;
         border-radius: 50%;
+        border: none;
+        outline: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 60px;
-        width: 100px; 
         transition: all 2s;
-        animation: mover-anima .5s infinite alternate;
+        animation: mover-anima 1s infinite alternate;
+        margin: 5px 0;
     }
 
     #box-logo {
@@ -125,6 +134,10 @@ export default {
     #logo {
         height: 50px;
         width: 50px;
+    }
+
+    .ponto > h3 {
+        color: #FFD700;
     }
 
     .invisible {
