@@ -1,14 +1,56 @@
 <template>
-    <input type="text" id="input-nome" maxlength="20" placeholder="seu nome" autofocus>
+    <form action="" @submit="Start">
+        <input v-model="username" type="text" id="input-name" maxlength="20" placeholder="seu nome" autofocus>
+        <input type="submit" value="Jogar" id="submit">
+    </form>
 </template>
 
 <script>
 export default {
-    name : "InputName"
+    name : "InputName",
+
+    data() {
+        return {
+            username : null,
+        }
+    }, 
+
+    methods : {
+        Start(e) {
+            e.preventDefault()
+
+            if(this.username == null)
+            {
+                const input = document.getElementById("input-name")
+                input.style.animation = 'mahoraga .2s infinite alternate'
+
+                setTimeout (() => {
+                    input.style.animation = 'none'
+                }, 1000)
+            }
+            else
+            {
+                console.log(`Tudo certo ${this.username}`)
+                this.$emit('onDisplay',{valor : false})
+            }
+
+            this.username = null
+        }
+    }
 }
 </script>
 
 <style scoped>
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        height: auto;
+        width: 100%;
+    }
 
     input {
         font: normal 1.8em var(--font-quiz);
@@ -26,10 +68,19 @@ export default {
         margin: auto;
     }
 
+    #submit {
+        background-color: var(--cor-secundaria);
+        animation: mahoraga .5s infinite alternate;
+    }
+
     @media (min-width: 800px)
     {
         input {
             margin: 0;
+        }
+
+        form {
+            flex-direction: row;
         }
     }
 
@@ -37,3 +88,4 @@ export default {
         color: white;
     }
 </style>
+

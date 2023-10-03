@@ -1,5 +1,5 @@
 <template>
-    <div class="container" id="fundo">
+    <div class="container" id="fundo" v-show="display==true">
         <PerguntaQuiz />
         <RespostaQuiz />
         <PlacarQuiz />
@@ -9,15 +9,19 @@
 <script>
 import PerguntaQuiz from './mains/Pergunta.vue'
 import RespostaQuiz from './mains/Resposta.vue'
-import PlacarQuiz from './mains/Placar'
+import PlacarQuiz from './mains/Placar.vue'
 
 export default {
     name : "MainQuiz",
 
     data() {
         return {
-
+            
         }
+    },
+
+    props : {
+        display : Boolean   // false - sumir    true - aparecer
     },
 
     components : {

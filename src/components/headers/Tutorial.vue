@@ -1,7 +1,7 @@
 <template>
     <div class="contenter">
         <div class="contenter">
-            <button>
+            <button id="botton-desc" @click="open('box-desc','botton-desc')">
                 Descrição
             </button>
             <div class="contenter box invisible" id="box-desc">
@@ -9,7 +9,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.
                 </p>
             </div>
-            <button>
+            <button id="botton-passo-passo" @click="open('box-passo-passo', 'botton-passo-passo')">
                 Como Jogar
             </button>
             <ul class="contenter box invisible" id="box-passo-passo">
@@ -49,7 +49,12 @@ export default {
     },
 
     methods : {
-
+        open(input, botton) {
+            const box = document.getElementById(`${input}`)
+            const button = document.getElementById(`${botton}`)
+            box.classList.toggle("invisible")
+            button.classList.toggle("color")
+        }
     },
 
     mounted() {
@@ -101,6 +106,10 @@ export default {
 
     .invisible {
         display: none;
+    }
+
+    .color {
+        background-color: var(--cor-secundaria);
     }
 
     @media (min-width: 800px)

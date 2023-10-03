@@ -1,5 +1,5 @@
 <template>
-        <div class="container box-ranking">
+        <div class="container box-ranking" v-show="display==true">
             <div class="box-podio container" id="box-segundo">
                 <div class="podio container" id="segundo">
                     <!-- ICON PODIO -->
@@ -11,7 +11,7 @@
             
             <div class="box-podio container" id="box-primeiro">
                 <div class="podio container" id="primeiro">
-                    <img src="/first-prize.png" alt="primeiro lugar" id="img-primeiro">
+                    <img src="/imgs/first-prize.png" alt="primeiro lugar" id="img-primeiro">
                 </div>
                 <h3 id="name-primeiro">Robson da Silva Araújo</h3>
                 <h4 id="time">501 seg</h4>
@@ -27,7 +27,7 @@
                 <h4 id="pointer">500 pts</h4>
             </div>
         </div>   
-    <TablePlayer />
+    <TablePlayer v-show="display==true"/>
 </template>
 
 <script>
@@ -44,6 +44,10 @@ export default {
         return {
 
         }
+    },
+
+    props: {
+        display : Boolean   // false - sumir    true - aparecer
     },
 
     methods : {

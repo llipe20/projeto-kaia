@@ -1,5 +1,5 @@
 <template>
-   <div class="container" id="circular">
+   <div class="container" id="circular" v-show="display==true">
         <div class="backdrop">
             <div class="gradiente">
                 <h1 style="color: black">[ IMAGEM DE FUNDO AQUI ]</h1>
@@ -8,7 +8,7 @@
 
         <!-- LOGO -->
         <div class="icon">
-            <img src="/logo-kaia.png" alt="logo" id="img-logo">
+            <img src="/imgs/logo-kaia.png" alt="logo" id="img-logo">
         </div>
 
         <!-- TITLE QUIZ -->
@@ -17,8 +17,7 @@
         <Tutorial-quiz />
 
         <div class="box-input">
-            <InputName />
-            <BottonStart />
+            <InputName @onDisplay="DisplayNone"/>
         </div>
         
         <h2>Ranking</h2>
@@ -28,27 +27,29 @@
 <script>
 import TutorialQuiz from './headers/Tutorial.vue'
 import InputName from './headers/InputName.vue'
-import BottonStart from './headers/Botton.vue'
 
 export default {
     name : "HeaderQuiz",
 
     data() {
         return {
-
+            display : true  // false - sumir    true - aparecer
         }
     },
 
     components : {
-        InputName, BottonStart, TutorialQuiz
+        InputName, TutorialQuiz
     },
 
     methods : {
-
+        DisplayNone(value) {
+            this.display = value  // recebe false
+            this.$emit('onDisplay', {valor : true})
+        }
     },
 
     mounted() {
-
+    
     }
 }
 </script>

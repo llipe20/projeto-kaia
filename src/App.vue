@@ -1,9 +1,9 @@
 <template>
   <div class="container box-principal">
-    <HeaderQuiz />
-    <RankIng />
-    <MainQuiz />
-    <FooterQuiz />
+    <HeaderQuiz @onDisplay="DisplayNone"/>
+    <RankIng :display="!value"/>
+    <MainQuiz :display="value"/>
+    <FooterQuiz :display="value"/>
   </div>
 </template>
 
@@ -15,13 +15,28 @@ import RankIng from './components/headers/Ranking.vue'
 
 export default {
   name: 'App',
+
   components: {
     HeaderQuiz,
     MainQuiz,
     FooterQuiz,
     RankIng 
+  },
+
+  data() {
+    return {
+      value : false   // false - sumir    true - aparecer
+    }
+  },
+
+  methods : {
+    DisplayNone(value) {
+            this.display = value // recebe true
+            console.log(this.display)
+    }
   }
 }
+
 </script>
 
 <style>
@@ -85,6 +100,10 @@ html::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+body {
+  background-color: #e0e0e0;
 }
 
 .box-principal {

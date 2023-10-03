@@ -1,5 +1,5 @@
 <template>
-    <h1>FOOTER AQUI</h1>
+    <h1 v-show="display==true">FOOTER AQUI</h1>
 </template>
 
 <script>
@@ -14,6 +14,10 @@ export default {
 
     components : {
 
+    },
+
+    props : {
+        display : Boolean   // false - sumir    true - aparecer
     },
 
     methods : {
