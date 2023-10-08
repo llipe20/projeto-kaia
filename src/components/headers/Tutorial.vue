@@ -5,31 +5,15 @@
                 Descrição
             </button>
             <div class="contenter box invisible" id="box-desc">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.
-                </p>
+                <p> {{ dados }} </p>
             </div>
+
             <button id="botton-passo-passo" @click="open('box-passo-passo', 'botton-passo-passo')">
                 Como Jogar
             </button>
             <ul class="contenter box invisible" id="box-passo-passo">
-                <li>
-                    1 - Insira seu nome no campo abaixo e aperte em "Jogar".
-                </li>
-                <li>
-                    2 - Leia as perguntas com atenção e aperte na alternativa que achar correta. 
-                </li>
-                <li>
-                    3 - Caso não saiba a resposta, aguarde 10 segundos e o jogo lhe dará uma dica para auxiliar. 
-                </li>
-                <li>
-                    4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies. 
-                </li>
-                <li>
-                    5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo. 
-                </li>
-                <li>
-                    Boa sorte!
+                <li v-for="passo in passos" :key="passo.id">
+                    {{ passo }}
                 </li>
             </ul>
         </div>
@@ -41,7 +25,27 @@ export default {
     name : 'TutorialQuiz',
 
     data() {
+        return {
 
+            passos : [
+
+                "1 - Insira seu nome no campo abaixo e aperte em 'Jogar'.",
+
+                "2 - Leia as perguntas com atenção e aperte na alternativa que achar correta.",
+
+                "3 - Caso não saiba a resposta, aperte no botão de 'DICA' e o jogo lhe ajudará nas repostas.",
+
+                "4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies.",
+
+                "5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo.",
+
+                "Boa sorte!"
+            ]
+        }
+    },
+
+    props : {
+        dados : Object
     },
 
     components : {

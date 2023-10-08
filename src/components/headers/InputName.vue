@@ -12,6 +12,11 @@ export default {
     data() {
         return {
             username : null,
+
+            // dados para enivar ao state 
+            data : { 
+                display : false
+            }
         }
     }, 
 
@@ -30,11 +35,8 @@ export default {
             }
             else
             {
-                console.log(`Tudo certo ${this.username}`)
-                this.$emit('onDisplay',{valor : false})
+                this.$store.commit('storeUser', this.data)
             }
-
-            this.username = null
         }
     }
 }

@@ -5,7 +5,7 @@
             <!-- VALOR PONTO -->
             <div class="container ponto">
                 <h3>Valendo</h3>
-                <h3>+ 15 pts</h3>
+                <h3>+ {{ dados[index].valor }} pts</h3>
             </div>
 
             <!-- SOMATÓRIO -->
@@ -17,12 +17,12 @@
             <!-- TEMPO -->
             <div class="container">
                 <img src="/imgs/clock.png" alt="tempo">
-                <h3>120 seg</h3>
+                <h3 style="width: 100px;">{{ relogio }} seg</h3>
             </div>
             
             <!-- DICA -->
             <div class="container">
-                <button>
+                <button id="gojo" @click="Show">
                     <img src="/imgs/logo-kaia.png" alt="logo-kaia" id="logo">
                 </button>
                 <h3>Dica</h3>
@@ -32,9 +32,9 @@
         <!-- BOX - DICA // escondido inicialmente -->
         <div class="container invisible" id="box-dica">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nesciunt deleniti aliquid blanditiis nisi aut sunt
+                {{ dados[index].dica }}
             </p>
-             <span class="container" id="close">
+             <span class="container" id="sukuna" @click="Show">
                 x
             </span>
         </div>
@@ -43,7 +43,42 @@
 
 <script>
 export default {
-    name : 'PlacarQuiz'
+    name : 'PlacarQuiz',
+
+    data() {
+        return {
+            relogio : null
+        }
+    },
+
+    props : {
+        dados : Object,  // dados do banco/api
+        index : Number
+    },
+
+    methods : {
+        // relógio em segundos
+        Cronometro() {
+            setTimeout(() => {
+                setInterval(() => {
+                    this.relogio += 1
+                }, 1000)
+            }, 3000)
+        },
+
+        // open e close botõa DICA
+        Show() {
+            const Boxplacar = document.getElementById('box-placar')
+            const Boxdica = document.getElementById('box-dica')
+
+            Boxdica.classList.toggle("invisible")
+            Boxplacar.classList.toggle("invisible")
+        } 
+    },
+
+     mounted() {
+        this.Cronometro()
+    }
 }
 </script>
 
@@ -70,6 +105,7 @@ export default {
         border-radius: 50% 50% 0 0;
         padding: 30px 20px 20px 20px;
         height: 150px;
+        transition: all .5s;
     }        
 
     #box-dica {

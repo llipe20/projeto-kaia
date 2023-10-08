@@ -22,17 +22,59 @@
         }
     ],
 
-    "tutorial" : [
-        "1 - Insira seu nome no campo abaixo e aperte em 'Jogar'.",
+    "tutorial" : {
 
-        "2 - Leia as perguntas com atenção e aperte na alternativa que achar correta.",
+        "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.",
+        
+        "passo" : [
 
-        "3 - Caso não saiba a resposta, aperte no botão de 'DICA' e o jogo lhe ajudará nas repostas.",
+            "1 - Insira seu nome no campo abaixo e aperte em 'Jogar'.",
 
-        "4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies.",
+            "2 - Leia as perguntas com atenção e aperte na alternativa que achar correta.",
 
-        "5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo.",
+            "3 - Caso não saiba a resposta, aperte no botão de 'DICA' e o jogo lhe ajudará nas repostas.",
 
-        "Boa sorte!"
+            "4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies.",
+
+            "5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo.",
+
+            "Boa sorte!"
+        ]
+    }
+        ,
+
+    "quiz" : [
+        {
+            "index" : "1",
+            "pergunta" : "pergunta 1",
+            "a" : "alternativa a",
+            "b" : "alternativa b",
+            "c" : "alternativa c",
+            "d" : "alternativa d",
+            "valor" : "15",
+            "dica" : "dica da pergunta 1"
+        },
+
+        {
+            "index" : "2",
+            "pergunta" : "'pergunta 2",
+            "a" : "alternativa a",
+            "b" : "alternativa b",
+            "c" : "alternativa c",
+            "d" : "alternativa d",
+            "valor" : "10",
+            "dica" : "dica da pergunta 2"
+        },
+
+        {
+            "index" : "3",
+            "pergunta" : "'pergunta 3",
+            "a" : "alternativa a",
+            "b" : "alternativa b",
+            "c" : "alternativa c",
+            "d" : "alternativa d",
+            "valor" : "25",
+            "dica" : "dica da pergunta 3"
+        }
     ]
 }

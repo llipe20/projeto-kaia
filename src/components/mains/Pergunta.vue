@@ -1,15 +1,26 @@
 <template>
     <div class="container" id="box-pergunta">
         <span class="container" id="quant">
-            2/15
+            {{ dados[index].index }} de {{ dados.length }}
         </span>
-        <h2>ovaehrpou fh hfurh hurfgh  hr nnm kf fji dj jfds ji jijin ien</h2>
+        <h2> {{ dados[index].pergunta }} </h2>
     </div>
 </template>
 
 <script>
 export default {
-    name : 'PerguntaQuiz'
+    name : 'PerguntaQuiz',
+
+    data() {
+        return {
+
+        }
+    },
+
+    props : {
+        dados : Object,  // dados do banco/api
+        index : Number
+    }
 }
 </script>
 

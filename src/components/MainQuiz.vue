@@ -1,8 +1,19 @@
 <template>
-    <div class="container" id="fundo" v-show="display==true">
-        <PerguntaQuiz />
-        <RespostaQuiz />
-        <PlacarQuiz />
+    <div class="container" id="fundo">
+        <PerguntaQuiz 
+            :dados="dados.quiz"
+            :index="index"
+        />
+
+        <RespostaQuiz 
+            :dados="dados.quiz" 
+            :index="index"
+        />
+
+        <PlacarQuiz 
+            :dados="dados.quiz" 
+            :index="index"
+        />
     </div>
 </template>
 
@@ -16,24 +27,16 @@ export default {
 
     data() {
         return {
-            
+            index : 1   // var que controla a troca de perguntas
         }
     },
 
     props : {
-        display : Boolean   // false - sumir    true - aparecer
+        dados : Object // dados banco/api
     },
 
     components : {
         PerguntaQuiz, RespostaQuiz, PlacarQuiz
-    },
-
-    methods : {
-
-    },
-
-    mounted() {
-        
     }
 }
 </script>
@@ -47,5 +50,6 @@ export default {
 
     #fundo {
         background-image: linear-gradient(to top, var(--cor-contraste), var(--cor-principal));
+        min-height: 100vh;
     }
 </style>

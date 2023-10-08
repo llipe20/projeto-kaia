@@ -8,7 +8,7 @@ export default {
 
     data() {
         return {
-
+            display : false
         }
     },
 
@@ -17,7 +17,7 @@ export default {
     },
 
     props : {
-        display : Boolean   // false - sumir    true - aparecer
+        
     },
 
     methods : {

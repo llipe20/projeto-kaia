@@ -1,8 +1,8 @@
 <template>
-   <div class="container" id="circular" v-show="display==true">
+   <div class="container" id="circular">
         <div class="backdrop">
             <div class="gradiente">
-                <h1 style="color: black">[ IMAGEM DE FUNDO AQUI ]</h1>
+
             </div>
         </div>
 
@@ -14,10 +14,10 @@
         <!-- TITLE QUIZ -->
         <h1>O quanto você sabe de gramática?</h1>
         
-        <Tutorial-quiz />
+        <Tutorial-quiz :dados="dados" />
 
         <div class="box-input">
-            <InputName @onDisplay="DisplayNone"/>
+            <InputName />
         </div>
         
         <h2>Ranking</h2>
@@ -33,8 +33,12 @@ export default {
 
     data() {
         return {
-            display : true  // false - sumir    true - aparecer
+
         }
+    },
+
+    props : {
+        dados : Object
     },
 
     components : {
@@ -42,10 +46,7 @@ export default {
     },
 
     methods : {
-        DisplayNone(value) {
-            this.display = value  // recebe false
-            this.$emit('onDisplay', {valor : true})
-        }
+
     },
 
     mounted() {
@@ -69,7 +70,7 @@ export default {
         background-size: cover;
         background-position: center center;
         width: 100%;
-        height: 300px;
+        height: 150px;
     }
 
     .gradiente {
@@ -86,7 +87,7 @@ export default {
         border: 5px solid white;
         position: absolute;
         background-color: white;
-        top: 210px;
+        top: 70px;
         background-position: 50% 50%;
     }
 

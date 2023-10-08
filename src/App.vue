@@ -1,9 +1,24 @@
 <template>
   <div class="container box-principal">
-    <HeaderQuiz @onDisplay="DisplayNone"/>
-    <RankIng :display="!value"/>
-    <MainQuiz :display="value"/>
-    <FooterQuiz :display="value"/>
+    <HeaderQuiz 
+      v-show="$store.state.display" 
+      v-if="complete"
+      :dados="dados"
+    />
+
+    <RankIng 
+      v-show="$store.state.display"
+      v-if="complete"
+      :dados="dados"
+    />
+
+    <MainQuiz 
+      v-show="!$store.state.display"
+      v-if="complete"
+      :dados="dados"  
+    />
+
+    <FooterQuiz />
   </div>
 </template>
 
@@ -14,27 +29,38 @@ import FooterQuiz from './components/FooterQuiz.vue'
 import RankIng from './components/headers/Ranking.vue'
 
 export default {
-  name: 'App',
+    name: 'App',
 
-  components: {
-    HeaderQuiz,
-    MainQuiz,
-    FooterQuiz,
-    RankIng 
-  },
+    components: {
+      HeaderQuiz,
+      MainQuiz,
+      FooterQuiz,
+      RankIng 
+    },
 
-  data() {
-    return {
-      value : false   // false - sumir    true - aparecer
+    data() {
+      return {
+        dados : {
+          quiz : [],
+        },
+
+        complete : null
+      }
+    },
+
+    methods : {
+        async getBanco() {
+          const req = await fetch('http://localhost:3000/quiz')
+          const data = await req.json()
+  
+          this.dados.quiz = data
+          this.complete = true
+        }
+    },
+
+    mounted() {
+       this.getBanco()
     }
-  },
-
-  methods : {
-    DisplayNone(value) {
-            this.display = value // recebe true
-            console.log(this.display)
-    }
-  }
 }
 
 </script>

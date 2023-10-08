@@ -1,5 +1,5 @@
 <template>
-        <div class="container box-ranking" v-show="display==true">
+        <div class="container box-ranking"  v-show="$store.state.display">
             <div class="box-podio container" id="box-segundo">
                 <div class="podio container" id="segundo">
                     <!-- ICON PODIO -->
@@ -27,7 +27,7 @@
                 <h4 id="pointer">500 pts</h4>
             </div>
         </div>   
-    <TablePlayer v-show="display==true"/>
+    <TablePlayer  v-show="$store.state.display" />
 </template>
 
 <script>
@@ -47,7 +47,7 @@ export default {
     },
 
     props: {
-        display : Boolean   // false - sumir    true - aparecer
+        dados : Object
     },
 
     methods : {

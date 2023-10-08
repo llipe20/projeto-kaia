@@ -1,16 +1,28 @@
 <template>
     <div class="container" id="box-alternativas">
-        <p class="alternativas">ds  jij ijr jirjuwer jn r,</p>
-        <p class="alternativas">ds  jij ijr jirjuwer jn r,</p>
-        <p class="alternativas">ds  jij ijr jirjuwer jn r,</p>
-        <p class="alternativas">ds  jij ijr jirjuwer jn r,</p>
+        <p class="alternativas"> {{ dados[index].a }} </p>
+        <p class="alternativas"> {{ dados[index].b }} </p>
+        <p class="alternativas"> {{ dados[index].c }} </p>
+        <p class="alternativas"> {{ dados[index].d }} </p>
     </div>
 </template>
 
 <script>
 export default {
-    name : 'RespostaQuiz'
+    name : 'RespostaQuiz',
+
+    data() {
+        return {
+
+        }
+    },
+
+    props : {
+        dados : Object,  // dados do banco/api
+        index : Number
+    }
 }
+
 </script>
 
 <style scoped>
