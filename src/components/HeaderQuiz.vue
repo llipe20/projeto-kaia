@@ -14,7 +14,7 @@
         <!-- TITLE QUIZ -->
         <h1>O quanto você sabe de gramática?</h1>
         
-        <Tutorial-quiz :dados="dados" />
+        <Tutorial-quiz />
 
         <div class="box-input">
             <InputName />
@@ -38,7 +38,7 @@ export default {
     },
 
     props : {
-        dados : Object
+
     },
 
     components : {

@@ -5,7 +5,7 @@
                 Descrição
             </button>
             <div class="contenter box invisible" id="box-desc">
-                <p> {{ dados }} </p>
+                <p> [Vazio] </p>
             </div>
 
             <button id="botton-passo-passo" @click="open('box-passo-passo', 'botton-passo-passo')">
@@ -45,7 +45,7 @@ export default {
     },
 
     props : {
-        dados : Object
+    
     },
 
     components : {

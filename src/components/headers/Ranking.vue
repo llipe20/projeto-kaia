@@ -1,5 +1,7 @@
 <template>
-        <div class="container box-ranking"  v-show="$store.state.display" v-if="complete">
+        <div class="container box-ranking" v-show="$store.state.display" v-if="complete">
+
+            <!-- SEGUNDO LUGAR -->
             <div class="box-podio container" id="box-segundo">
                 <div class="podio container" id="segundo">
                     <!-- ICON PODIO -->
@@ -9,6 +11,7 @@
                 <h4 id="pointer"> {{ data[1].point }} pts</h4>
             </div>
             
+             <!-- PRIMEIRO LUGAR -->
             <div class="box-podio container" id="box-primeiro">
                 <div class="podio container" id="primeiro">
                     <img src="/imgs/first-prize.png" alt="primeiro lugar" id="img-primeiro">
@@ -18,6 +21,7 @@
                 <h4 id="pointer"> {{ data[0].point }} pts</h4>
             </div>
 
+            <!-- TERCEIRO LUGAR -->
             <div class="box-podio container" id="box-terceiro">
                 <div class="podio container" id="terceiro">
                     <!-- ICON PODIO -->
@@ -30,7 +34,7 @@
 
     <TablePlayer  
         v-show="$store.state.display" 
-        :dados="data"
+        v-if="complete"
     />
 </template>
 
@@ -46,21 +50,22 @@ export default {
 
     data() {
         return {
-            data : null,
-            complete : null
+            complete : null,
+            data : []
         }
     },
 
     props: {
-        dados : Object
+
     },
 
     methods : {
         async getRanking() {
             const req = await fetch('http://localhost:3000/ranking')
-            const data = await req.json()
-            console.log(data)
-            this.data = data
+            const dados = await req.json()
+    
+            this.$store.commit("GetRanking", dados)
+            this.data = this.$store.state.dados.ranking
             this.complete = true
         }
     },

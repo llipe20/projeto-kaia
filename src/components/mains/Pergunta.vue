@@ -1,9 +1,9 @@
 <template>
     <div class="container" id="box-pergunta">
         <span class="container" id="quant">
-            {{ dados[index].index }} de {{ dados.length }}
+            {{ perguntas[index].index }} de {{perguntas.length }}
         </span>
-        <h2> {{ dados[index].pergunta }} </h2>
+        <h2> {{ perguntas[index].pergunta }} </h2>
     </div>
 </template>
 
@@ -13,12 +13,11 @@ export default {
 
     data() {
         return {
-
+            perguntas : this.$store.state.dados.quiz
         }
     },
 
     props : {
-        dados : Object,  // dados do banco/api
         index : Number
     }
 }

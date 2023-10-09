@@ -10,8 +10,8 @@
                 <td>Tempo</td>
                 <td>Pontos</td>
             </tr>
-            <tr v-for="dado in dados" :key="dado.id" v-show="dado.id > 2">
-                <td> {{ dado.id + 1 }}th</td>
+            <tr v-for="dado in dados" :key="dado.id" v-show="dado.id > 3">
+                <td> {{ dado.id }}th</td>
                 <td> {{ dado.name }} </td>
                 <td> {{ dado.time }} seg</td>
                 <td> {{ dado.point }} </td>
@@ -24,16 +24,22 @@
 export default {
     name : 'TablePlayer',
 
+    data() {
+        return {
+            dados : this.$store.state.dados.ranking
+        }
+    },
+
     props : {
-        dados : Array  // dados do banco/api
+
     },
 
     methods: {
         Alternar() {
             const rows = document.querySelectorAll("tr")
-
+             
             for(let i = 0; i < rows.length; i++) {
-                if(i % 2 == 0 && i != 0) {
+                if(i % 2 != 0 && i != 0) {
                     rows[i].classList.add("alternar")
                 }
             }

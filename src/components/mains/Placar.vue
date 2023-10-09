@@ -5,7 +5,7 @@
             <!-- VALOR PONTO -->
             <div class="container ponto">
                 <h3>Valendo</h3>
-                <h3>+ {{ dados[index].valor }} pts</h3>
+                <h3>+ {{ perguntas[index].valor }} pts</h3>
             </div>
 
             <!-- SOMATÓRIO -->
@@ -32,7 +32,7 @@
         <!-- BOX - DICA // escondido inicialmente -->
         <div class="container invisible" id="box-dica">
             <p>
-                {{ dados[index].dica }}
+               {{ perguntas[index].dica }}
             </p>
              <span class="container" id="sukuna" @click="Show">
                 x
@@ -47,12 +47,12 @@ export default {
 
     data() {
         return {
-            relogio : null
+            relogio : null,
+            perguntas : this.$store.state.dados.quiz
         }
     },
 
     props : {
-        dados : Object,  // dados do banco/api
         index : Number
     },
 

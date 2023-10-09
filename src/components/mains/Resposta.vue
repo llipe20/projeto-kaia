@@ -1,9 +1,9 @@
 <template>
     <div class="container" id="box-alternativas">
-        <p class="alternativas"> {{ dados[index].a }} </p>
-        <p class="alternativas"> {{ dados[index].b }} </p>
-        <p class="alternativas"> {{ dados[index].c }} </p>
-        <p class="alternativas"> {{ dados[index].d }} </p>
+        <p class="alternativas"> {{ options[index].a }} </p>
+        <p class="alternativas"> {{ options[index].b }} </p>
+        <p class="alternativas"> {{ options[index].c }} </p>
+        <p class="alternativas"> {{ options[index].d }} </p>
     </div>
 </template>
 
@@ -13,12 +13,11 @@ export default {
 
     data() {
         return {
-
+            options : this.$store.state.dados.quiz
         }
     },
 
     props : {
-        dados : Object,  // dados do banco/api
         index : Number
     }
 }

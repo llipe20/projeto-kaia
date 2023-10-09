@@ -1,4 +1,4 @@
-{
+ {
     "paleta" : [
         {
             "principal" : "rgb(1, 66, 130)",
@@ -81,7 +81,7 @@
     "ranking" : [
         {
             "id" : 1,
-            "name" : "Mahoraga",
+            "name" : "Felipe",
             "time" : 50,
             "point" : "8000"
         },
@@ -93,7 +93,7 @@
         },
         {
             "id" : 3,
-            "name" : "Saatoru Gojo",
+            "name" : "Satoru Gojo",
             "time" : 110,
             "point" : "500"
         },
@@ -105,9 +105,15 @@
         },
         {
             "id" : 5,
-            "name" : "Felipe",
+            "name" : "Mahoraga",
             "time" : 26,
             "point" : "600"
+        },
+        {
+            "id" : 6,
+            "name" : "Chopper",
+            "time" : 66,
+            "point" : "780"
         }
     ]
 }

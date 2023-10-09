@@ -1,19 +1,10 @@
 <template>
     <div class="container" id="fundo">
-        <PerguntaQuiz 
-            :dados="dados.quiz"
-            :index="index"
-        />
+        <PerguntaQuiz :index="index"/>
 
-        <RespostaQuiz 
-            :dados="dados.quiz" 
-            :index="index"
-        />
+        <RespostaQuiz :index="index"/>
 
-        <PlacarQuiz 
-            :dados="dados.quiz" 
-            :index="index"
-        />
+        <PlacarQuiz :index="index" />
     </div>
 </template>
 
@@ -27,12 +18,12 @@ export default {
 
     data() {
         return {
-            index : 1   // var que controla a troca de perguntas
+            index : 0
         }
     },
 
     props : {
-        dados : Object // dados banco/api
+
     },
 
     components : {

@@ -3,19 +3,16 @@
     <HeaderQuiz 
       v-show="$store.state.display" 
       v-if="complete"
-      :dados="dados"
     />
 
     <RankIng 
       v-show="$store.state.display"
       v-if="complete"
-      :dados="dados"
     />
 
     <MainQuiz 
       v-show="!$store.state.display"
       v-if="complete"
-      :dados="dados"  
     />
 
     <FooterQuiz />
@@ -40,26 +37,22 @@ export default {
 
     data() {
       return {
-        dados : {
-          quiz : [],
-        },
-
         complete : null
       }
     },
 
     methods : {
-        async getBanco() {
+        async getApi() {
           const req = await fetch('http://localhost:3000/quiz')
           const data = await req.json()
   
-          this.dados.quiz = data
+          this.$store.commit("GetQuiz", data)
           this.complete = true
         }
     },
 
     mounted() {
-       this.getBanco()
+       this.getApi()
     }
 }
 
