@@ -51,7 +51,7 @@
             "b" : "alternativa b",
             "c" : "alternativa c",
             "d" : "alternativa d",
-            "valor" : "15",
+            "valor" : 15,
             "dica" : "dica da pergunta 1"
         },
 
@@ -62,7 +62,7 @@
             "b" : "alternativa b",
             "c" : "alternativa c",
             "d" : "alternativa d",
-            "valor" : "10",
+            "valor" : 10,
             "dica" : "dica da pergunta 2"
         },
 
@@ -73,8 +73,41 @@
             "b" : "alternativa b",
             "c" : "alternativa c",
             "d" : "alternativa d",
-            "valor" : "25",
+            "valor" : 25,
             "dica" : "dica da pergunta 3"
+        }
+    ],
+
+    "ranking" : [
+        {
+            "id" : 1,
+            "name" : "Mahoraga",
+            "time" : 50,
+            "point" : "8000"
+        },
+        {
+            "id" : 2,
+            "name" : "Robson Silva Araújo",
+            "time" : 501,
+            "point" : "8000"
+        },
+        {
+            "id" : 3,
+            "name" : "Saatoru Gojo",
+            "time" : 110,
+            "point" : "500"
+        },
+        {
+            "id" : 4,
+            "name" : "Neymar Jr.",
+            "time" : 26,
+            "point" : "220"
+        },
+        {
+            "id" : 5,
+            "name" : "Felipe",
+            "time" : 26,
+            "point" : "600"
         }
     ]
 }

@@ -10,29 +10,11 @@
                 <td>Tempo</td>
                 <td>Pontos</td>
             </tr>
-            <tr>
-                <td>4th</td>
-                <td>Mahoraga</td>
-                <td>50 seg</td>
-                <td>8000</td>
-            </tr>
-            <tr class="alternar">
-                <td>5th</td>
-                <td>Neymar Jr.</td>
-                <td>26 seg</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>6th</td>
-                <td>Satoru Gojo</td>
-                <td>10 seg</td>
-                <td>500</td>
-            </tr>
-            <tr class="alternar">
-                <td>7th</td>
-                <td>Felipe</td>
-                <td>63 seg</td>
-                <td>120</td>
+            <tr v-for="dado in dados" :key="dado.id" v-show="dado.id > 2">
+                <td> {{ dado.id + 1 }}th</td>
+                <td> {{ dado.name }} </td>
+                <td> {{ dado.time }} seg</td>
+                <td> {{ dado.point }} </td>
             </tr>
         </table>
     </div>
@@ -40,7 +22,27 @@
 
 <script>
 export default {
-    name : 'TablePlayer'
+    name : 'TablePlayer',
+
+    props : {
+        dados : Array  // dados do banco/api
+    },
+
+    methods: {
+        Alternar() {
+            const rows = document.querySelectorAll("tr")
+
+            for(let i = 0; i < rows.length; i++) {
+                if(i % 2 == 0 && i != 0) {
+                    rows[i].classList.add("alternar")
+                }
+            }
+        }
+    },
+
+   mounted() {
+        this.Alternar();
+   }
 }
 </script>
 

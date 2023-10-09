@@ -1,33 +1,37 @@
 <template>
-        <div class="container box-ranking"  v-show="$store.state.display">
+        <div class="container box-ranking"  v-show="$store.state.display" v-if="complete">
             <div class="box-podio container" id="box-segundo">
                 <div class="podio container" id="segundo">
                     <!-- ICON PODIO -->
                 </div>
-                <h3>Neymar Jr.</h3>
-                <h4 id="time">26 seg</h4>
-                <h4 id="pointer">220 pts</h4>
+                <h3> {{ data[1].name }} </h3>
+                <h4 id="time"> {{ data[1].time }} seg</h4>
+                <h4 id="pointer"> {{ data[1].point }} pts</h4>
             </div>
             
             <div class="box-podio container" id="box-primeiro">
                 <div class="podio container" id="primeiro">
                     <img src="/imgs/first-prize.png" alt="primeiro lugar" id="img-primeiro">
                 </div>
-                <h3 id="name-primeiro">Robson da Silva Araújo</h3>
-                <h4 id="time">501 seg</h4>
-                <h4 id="pointer">+ 8.000 pts</h4>
+                <h3 id="name-primeiro">  {{ data[0].name }} </h3>
+                <h4 id="time"> {{ data[0].time }} seg</h4>
+                <h4 id="pointer"> {{ data[0].point }} pts</h4>
             </div>
 
             <div class="box-podio container" id="box-terceiro">
                 <div class="podio container" id="terceiro">
                     <!-- ICON PODIO -->
                 </div>
-                <h3>Satoru Gojo</h3>
-                <h4 id="time">110 seg</h4>
-                <h4 id="pointer">500 pts</h4>
+                <h3> {{ data[2].name }} </h3>
+                <h4 id="time"> {{ data[2].time }} seg</h4>
+                <h4 id="pointer"> {{ data[2].point }} pts</h4>
             </div>
         </div>   
-    <TablePlayer  v-show="$store.state.display" />
+
+    <TablePlayer  
+        v-show="$store.state.display" 
+        :dados="data"
+    />
 </template>
 
 <script>
@@ -42,7 +46,8 @@ export default {
 
     data() {
         return {
-
+            data : null,
+            complete : null
         }
     },
 
@@ -51,11 +56,17 @@ export default {
     },
 
     methods : {
-
+        async getRanking() {
+            const req = await fetch('http://localhost:3000/ranking')
+            const data = await req.json()
+            console.log(data)
+            this.data = data
+            this.complete = true
+        }
     },
 
-    mounted() {
-
+    created() {
+        this.getRanking()
     }
 }
 </script>
