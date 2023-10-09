@@ -11,7 +11,7 @@
             <!-- SOMATÓRIO -->
             <div class="container">
                 <img src="/imgs/money.png" alt="pontos">
-                <h3>120 pts</h3>
+                <h3> {{ totalPonto }} pts</h3>
             </div>
 
             <!-- TEMPO -->
@@ -48,12 +48,18 @@ export default {
     data() {
         return {
             relogio : null,
-            perguntas : this.$store.state.dados.quiz
+            perguntas : this.$store.state.dados.quiz,
+        }
+    },
+
+    computed : {
+        totalPonto() {
+            return this.$store.state.enviar.point
         }
     },
 
     props : {
-        index : Number
+        index : Number,
     },
 
     methods : {
@@ -62,6 +68,7 @@ export default {
             setTimeout(() => {
                 setInterval(() => {
                     this.relogio += 1
+                    this.$store.commit("UpdateTime", this.relogio)
                 }, 1000)
             }, 3000)
         },

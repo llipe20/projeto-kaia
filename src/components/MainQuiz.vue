@@ -2,9 +2,14 @@
     <div class="container" id="fundo">
         <PerguntaQuiz :index="index"/>
 
-        <RespostaQuiz :index="index"/>
+        <RespostaQuiz 
+            @modify="ModifyIndex" 
+            :index="index"
+        />
 
-        <PlacarQuiz :index="index" />
+        <PlacarQuiz 
+            :index="index" 
+        />
     </div>
 </template>
 
@@ -14,23 +19,29 @@ import RespostaQuiz from './mains/Resposta.vue'
 import PlacarQuiz from './mains/Placar.vue'
 
 export default {
-    name : "MainQuiz",
+    name: "MainQuiz",
 
     data() {
         return {
-            index : 0
+            index: 0
+        };
+    },
+
+    methods: {
+        ModifyIndex(value) {
+            if (value) {
+                this.index += 1;
+            }
         }
     },
 
-    props : {
-
-    },
-
-    components : {
+    components: {
         PerguntaQuiz, RespostaQuiz, PlacarQuiz
-    }
-}
+    },
+};
 </script>
+
+
 
 <style scoped>
     .container {

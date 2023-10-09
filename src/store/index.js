@@ -3,9 +3,16 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     display : true,
+
     dados : {
       quiz : [],
       ranking : []
+    },
+
+    enviar : {
+      player : null,
+      time : null,
+      point : 0
     }
   },
 
@@ -24,6 +31,18 @@ export default createStore({
 
     GetRanking(state, data) {
       state.dados.ranking = data
+    },
+
+    GetName(state, data) {
+      state.enviar.name = data
+    },
+
+    UpdateTime(state, data) {
+      state.enviar.time = data
+    },
+
+    UpdatePlacar(state, data) {
+      state.enviar.point += data 
     }
   },
 

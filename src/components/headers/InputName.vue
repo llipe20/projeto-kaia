@@ -36,6 +36,7 @@ export default {
             else
             {
                 this.$store.commit('storeUser', this.data)
+                this.$store.commit("GetName", this.username)
             }
         }
     }

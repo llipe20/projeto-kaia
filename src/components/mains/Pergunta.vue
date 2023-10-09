@@ -1,27 +1,31 @@
 <template>
-    <div class="container" id="box-pergunta">
-        <span class="container" id="quant">
-            {{ perguntas[index].index }} de {{perguntas.length }}
-        </span>
-        <h2> {{ perguntas[index].pergunta }} </h2>
-    </div>
+  <div class="container" id="box-pergunta">
+    <span class="container" id="quant">
+      {{ index + 1 }} de {{ perguntas.length }}
+    </span>
+    <h2> {{ perguntaAtual.pergunta }} </h2>
+  </div>
 </template>
 
 <script>
 export default {
-    name : 'PerguntaQuiz',
+  name: 'PerguntaQuiz',
 
-    data() {
-        return {
-            perguntas : this.$store.state.dados.quiz
-        }
+  props: {
+    index: Number,
+  },
+
+  computed: {
+    perguntas() {
+      return this.$store.state.dados.quiz;
     },
-
-    props : {
-        index : Number
-    }
-}
+    perguntaAtual() {
+      return this.perguntas[this.index] || {};
+    },
+  },
+};
 </script>
+
 
 <style scoped>
 

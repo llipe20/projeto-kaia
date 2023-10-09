@@ -51,6 +51,7 @@
             "b" : "alternativa b",
             "c" : "alternativa c",
             "d" : "alternativa d",
+            "resposta" : "alternativa d",
             "valor" : 15,
             "dica" : "dica da pergunta 1"
         },
@@ -62,6 +63,7 @@
             "b" : "alternativa b",
             "c" : "alternativa c",
             "d" : "alternativa d",
+            "resposta" : "alternativa a",
             "valor" : 10,
             "dica" : "dica da pergunta 2"
         },
@@ -73,6 +75,7 @@
             "b" : "alternativa b",
             "c" : "alternativa c",
             "d" : "alternativa d",
+            "resposta" : "alternativa c",
             "valor" : 25,
             "dica" : "dica da pergunta 3"
         }
