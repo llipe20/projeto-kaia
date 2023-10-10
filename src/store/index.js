@@ -43,6 +43,7 @@ export default createStore({
 
     UpdatePlacar(state, data) {
       state.enviar.point += data 
+      localStorage.setItem('quizPonto', state.enviar.point.toString())
     }
   },
 

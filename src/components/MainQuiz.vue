@@ -1,47 +1,52 @@
 <template>
-    <div class="container" id="fundo">
-        <PerguntaQuiz :index="index"/>
+  <div class="container" id="fundo">
+    <PerguntaQuiz :index="index" />
 
-        <RespostaQuiz 
-            @modify="ModifyIndex" 
-            :index="index"
-        />
+    <RespostaQuiz @modify="ModifyIndex" :index="index" />
 
-        <PlacarQuiz 
-            :index="index" 
-        />
-    </div>
+    <PlacarQuiz :index="index" />
+  </div>
 </template>
 
 <script>
-import PerguntaQuiz from './mains/Pergunta.vue'
-import RespostaQuiz from './mains/Resposta.vue'
-import PlacarQuiz from './mains/Placar.vue'
+import PerguntaQuiz from "./mains/Pergunta.vue"
+import RespostaQuiz from "./mains/Resposta.vue"
+import PlacarQuiz from "./mains/Placar.vue"
 
 export default {
-    name: "MainQuiz",
+  name: "MainQuiz",
 
-    data() {
-        return {
-            index: 0
-        };
-    },
+  data() {
+    return {
+      index: 0,
+    };
+  },
 
-    methods: {
-        ModifyIndex(value) {
-            if (value) {
-                this.index += 1;
-            }
-        }
+  methods: {
+    // Add novo valor para index assim que a pergunta for resposdinda
+    ModifyIndex(value) {
+      if (value) {
+        this.index += 1
+        localStorage.setItem("quizIndex", this.index)
+      }
     },
+  },
 
-    components: {
-        PerguntaQuiz, RespostaQuiz, PlacarQuiz
-    },
-};
+  mounted() {
+    // Recuperar o valor do index do Local Storage 
+    const savedIndex = localStorage.getItem("quizIndex")
+    if (savedIndex !== null) {
+      this.index = parseInt(savedIndex, 10)
+    }
+  },
+
+  components: {
+    PerguntaQuiz,
+    RespostaQuiz,
+    PlacarQuiz,
+  },
+}
 </script>
-
-
 
 <style scoped>
     .container {

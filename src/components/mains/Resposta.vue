@@ -38,6 +38,7 @@ export default {
             } else {
                 e.target.classList.add("errada")
             }
+            
             setTimeout(() => {
                 if (this.index < this.options.length - 1) {
                     this.$emit("modify", { valor: true });
@@ -76,6 +77,14 @@ export default {
         transform: scale(.9);
         transition: all .5s;
     }
+        
+    @media (min-width: 800px)
+    {
+        .alternativas:hover {
+            background-color: var(--cor-contraste);
+            transform: scale(1);
+        }
+    }
 
     .correta {
         background-color: green;
@@ -85,13 +94,5 @@ export default {
     .errada {
         background-color: red;
         animation: mahoraga .2s alternate infinite;
-    }
-        
-    @media (min-width: 800px)
-    {
-        .alternativas:hover {
-            background-color: var(--cor-contraste);
-            transform: scale(1);
-        }
     }
 </style>

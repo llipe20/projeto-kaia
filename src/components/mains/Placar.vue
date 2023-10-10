@@ -1,93 +1,98 @@
 <template>
-    <div class="container">
-        <div class="container" id="box-placar">
+  <div class="container">
+    <div class="container" id="box-placar">
 
-            <!-- VALOR PONTO -->
-            <div class="container ponto">
-                <h3>Valendo</h3>
-                <h3>+ {{ perguntas[index].valor }} pts</h3>
-            </div>
+      <!-- VALOR PONTO -->
+      <div class="container ponto">
+        <h3>Valendo</h3>
+        <h3>+ {{ perguntas[index].valor }} pts</h3>
+      </div>
 
-            <!-- SOMATÓRIO -->
-            <div class="container">
-                <img src="/imgs/money.png" alt="pontos">
-                <h3> {{ totalPonto }} pts</h3>
-            </div>
+      <!-- SOMATÓRIO -->
+      <div class="container">
+        <img src="/imgs/money.png" alt="pontos">
+        <h3> {{ totalPonto }} pts</h3>
+      </div>
 
-            <!-- TEMPO -->
-            <div class="container">
-                <img src="/imgs/clock.png" alt="tempo">
-                <h3 style="width: 100px;">{{ relogio }} seg</h3>
-            </div>
-            
-            <!-- DICA -->
-            <div class="container">
-                <button id="gojo" @click="Show">
-                    <img src="/imgs/logo-kaia.png" alt="logo-kaia" id="logo">
-                </button>
-                <h3>Dica</h3>
-            </div>
-        </div>
+      <!-- TEMPO -->
+      <div class="container">
+        <img src="/imgs/clock.png" alt="tempo">
+        <h3 style="width: 100px;">{{ relogio }} seg</h3>
+      </div>
 
-        <!-- BOX - DICA // escondido inicialmente -->
-        <div class="container invisible" id="box-dica">
-            <p>
-               {{ perguntas[index].dica }}
-            </p>
-             <span class="container" id="sukuna" @click="Show">
-                x
-            </span>
-        </div>
+      <!-- DICA -->
+      <div class="container">
+        <button id="gojo" @click="Show">
+          <img src="/imgs/logo-kaia.png" alt="logo-kaia" id="logo">
+        </button>
+        <h3>Dica</h3>
+      </div>
     </div>
+
+    <!-- BOX - DICA // escondido inicialmente -->
+    <div class="container invisible" id="box-dica">
+      <p>
+        {{ perguntas[index].dica }}
+      </p>
+      <span class="container" id="sukuna" @click="Show">
+        x
+      </span>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name : 'PlacarQuiz',
+  name: 'PlacarQuiz',
 
-    data() {
-        return {
-            relogio : null,
-            perguntas : this.$store.state.dados.quiz,
-        }
-    },
-
-    computed : {
-        totalPonto() {
-            return this.$store.state.enviar.point
-        }
-    },
-
-    props : {
-        index : Number,
-    },
-
-    methods : {
-        // relógio em segundos
-        Cronometro() {
-            setTimeout(() => {
-                setInterval(() => {
-                    this.relogio += 1
-                    this.$store.commit("UpdateTime", this.relogio)
-                }, 1000)
-            }, 3000)
-        },
-
-        // open e close botõa DICA
-        Show() {
-            const Boxplacar = document.getElementById('box-placar')
-            const Boxdica = document.getElementById('box-dica')
-
-            Boxdica.classList.toggle("invisible")
-            Boxplacar.classList.toggle("invisible")
-        } 
-    },
-
-     mounted() {
-        this.Cronometro()
+  data() {
+    return {
+      relogio: parseInt(localStorage.getItem('quizRelogio')),
+      perguntas: this.$store.state.dados.quiz
     }
-}
+  },
+
+  computed: {
+    totalPonto() {
+      return this.$store.state.enviar.point
+    },
+  },
+
+  props: {
+    index: Number,
+  },
+
+  methods: {
+    // relógio em segundos
+    Cronometro() {
+      setTimeout(() => {
+        setInterval(() => {
+          this.relogio += 1
+          this.$store.commit("UpdateTime", this.relogio)
+
+          // Salvar o valor do relógio no Local Storage
+          localStorage.setItem('quizRelogio', this.relogio.toString())
+        }, 1000)
+      }, 3000)
+    },
+
+    // open e close botão DICA
+    Show() {
+      const Boxplacar = document.getElementById('box-placar')
+      const Boxdica = document.getElementById('box-dica')
+
+      Boxdica.classList.toggle("invisible")
+      Boxplacar.classList.toggle("invisible")
+    },
+  },
+
+  mounted() {
+    this.Cronometro()
+    this.totalPonto = parseInt(localStorage.getItem('quizPonto')) || 0
+  },
+};
 </script>
+
 
 <style scoped>
 
