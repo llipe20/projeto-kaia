@@ -44,14 +44,6 @@ export default {
         }
     },
 
-    props : {
-    
-    },
-
-    components : {
-
-    },
-
     methods : {
         open(input, botton) {
             const box = document.getElementById(`${input}`)
@@ -59,10 +51,6 @@ export default {
             box.classList.toggle("invisible")
             button.classList.toggle("color")
         }
-    },
-
-    mounted() {
-
     }
 }
 </script>

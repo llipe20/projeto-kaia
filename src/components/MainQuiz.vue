@@ -4,7 +4,7 @@
 
     <RespostaQuiz @modify="ModifyIndex" :index="index" />
 
-    <PlacarQuiz :index="index" />
+    <PlacarQuiz :index="index" :pausar="true"/>
   </div>
 </template>
 
@@ -18,23 +18,25 @@ export default {
 
   data() {
     return {
-      index: 0,
+      index: 0
     };
   },
 
   methods: {
     // Add novo valor para index assim que a pergunta for resposdinda
     ModifyIndex(value) {
-      if (value) {
+       if (value === true) {
         this.index += 1
-        localStorage.setItem("quizIndex", this.index)
+      } else {
+        this.index = 0
       }
-    },
+      localStorage.setItem("Index", this.index)
+    }
   },
 
   mounted() {
     // Recuperar o valor do index do Local Storage 
-    const savedIndex = localStorage.getItem("quizIndex")
+    const savedIndex = localStorage.getItem("Index")
     if (savedIndex !== null) {
       this.index = parseInt(savedIndex, 10)
     }

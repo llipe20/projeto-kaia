@@ -1,5 +1,5 @@
 <template>
-        <div class="container box-ranking" v-show="$store.state.display" v-if="complete">
+        <div class="container box-ranking" v-show="$store.state.display == 1" v-if="complete">
 
             <!-- SEGUNDO LUGAR -->
             <div class="box-podio container" id="box-segundo">
@@ -33,7 +33,7 @@
         </div>   
 
     <TablePlayer  
-        v-show="$store.state.display" 
+        v-show="$store.state.display == 1" 
         v-if="complete"
     />
 </template>

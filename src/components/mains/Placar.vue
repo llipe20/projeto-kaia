@@ -17,7 +17,7 @@
       <!-- TEMPO -->
       <div class="container">
         <img src="/imgs/clock.png" alt="tempo">
-        <h3 style="width: 100px;">{{ relogio }} seg</h3>
+        <h3 style="width: 120px;">{{ relogio }} seg</h3>
       </div>
 
       <!-- DICA -->
@@ -47,8 +47,9 @@ export default {
 
   data() {
     return {
-      relogio: parseInt(localStorage.getItem('quizRelogio')),
-      perguntas: this.$store.state.dados.quiz
+      relogio : parseInt(localStorage.getItem('Cronometro')),
+      perguntas: this.$store.state.dados.quiz,
+      idCronometro : null
     }
   },
 
@@ -65,15 +66,10 @@ export default {
   methods: {
     // relógio em segundos
     Cronometro() {
-      setTimeout(() => {
-        setInterval(() => {
-          this.relogio += 1
-          this.$store.commit("UpdateTime", this.relogio)
-
-          // Salvar o valor do relógio no Local Storage
-          localStorage.setItem('quizRelogio', this.relogio.toString())
+        this.idCronometro = setInterval(() => {
+            this.relogio += 1
+            this.$store.commit("UpdateTime", this.relogio)
         }, 1000)
-      }, 3000)
     },
 
     // open e close botão DICA
@@ -83,16 +79,15 @@ export default {
 
       Boxdica.classList.toggle("invisible")
       Boxplacar.classList.toggle("invisible")
-    },
+    }
   },
 
   mounted() {
     this.Cronometro()
-    this.totalPonto = parseInt(localStorage.getItem('quizPonto')) || 0
-  },
-};
+    this.totalPonto = parseInt(localStorage.getItem('Ponto'))
+  }
+}
 </script>
-
 
 <style scoped>
 

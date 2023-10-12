@@ -1,5 +1,17 @@
 <template>
-    <h1 v-show="display==true">FOOTER AQUI</h1>
+    <div class="container">
+        <h1>FOOTER AQUI</h1>
+
+        <div>
+            {{ $store.state.enviar.name }}
+            {{ $store.state.enviar.time }}
+            {{ $store.state.enviar.point }}
+        </div>
+
+        <button @click="Close">
+            Inicio
+        </button>
+    </div>
 </template>
 
 <script>
@@ -21,8 +33,11 @@ export default {
     },
 
     methods : {
-
-    },
+        Close() {
+            localStorage.clear()
+            this.$store.commit("ModifyDisplay", { display : 1 }) // ABRIR HEADER
+        }
+    }, 
 
     mounted() {
         

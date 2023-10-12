@@ -11,12 +11,7 @@ export default {
 
     data() {
         return {
-            username : null,
-
-            // dados para enivar ao state 
-            data : { 
-                display : false
-            }
+            username : null
         }
     }, 
 
@@ -35,8 +30,9 @@ export default {
             }
             else
             {
-                this.$store.commit('storeUser', this.data)
                 this.$store.commit("GetName", this.username)
+                this.$store.commit('ModifyDisplay', { display : 2 }) // ABRIR MAIN
+                localStorage.setItem("Display", this.$store.state.display)
             }
         }
     }

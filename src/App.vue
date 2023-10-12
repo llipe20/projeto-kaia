@@ -1,21 +1,24 @@
 <template>
   <div class="container box-principal">
     <HeaderQuiz 
-      v-show="$store.state.display" 
+      v-show="$store.state.display == 1" 
       v-if="complete"
     />
 
     <RankIng 
-      v-show="$store.state.display"
+      v-show="$store.state.display == 1"
       v-if="complete"
     />
 
     <MainQuiz 
-      v-show="!$store.state.display"
+      v-show="$store.state.display == 2"
       v-if="complete"
     />
 
-    <FooterQuiz />
+    <FooterQuiz 
+      v-show="$store.state.display == 3"
+      v-if="complete"
+    />
   </div>
 </template>
 
@@ -53,6 +56,10 @@ export default {
 
     mounted() {
        this.getApi()
+
+       if(localStorage.getItem("Display")) {
+          this.$store.state.display = localStorage.getItem("Display")
+       }
     }
 }
 

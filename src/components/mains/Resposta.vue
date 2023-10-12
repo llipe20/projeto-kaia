@@ -38,12 +38,14 @@ export default {
             } else {
                 e.target.classList.add("errada")
             }
-            
+
             setTimeout(() => {
                 if (this.index < this.options.length - 1) {
-                    this.$emit("modify", { valor: true });
+                    this.$emit("modify", true);
                 } else {
-                    console.log("acabou quiz") // ABRIR FOOTER AQUI
+                    this.$emit("modify", false);
+                    this.$store.commit("ModifyDisplay", { display : 3 }) // ABRIR FOOTER
+                    localStorage.setItem("Display", this.$store.state.display)
                 }
                 this.Clear(e.target)
             }, 2000)
@@ -80,7 +82,7 @@ export default {
         
     @media (min-width: 800px)
     {
-        .alternativas:hover {
+     .alternativas:focus {
             background-color: var(--cor-contraste);
             transform: scale(1);
         }

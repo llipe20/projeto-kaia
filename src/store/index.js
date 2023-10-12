@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    display : true,
+    display : 1,
 
     dados : {
       quiz : [],
@@ -21,7 +21,7 @@ export default createStore({
   },
 
   mutations: {
-    storeUser(state, data) {
+    ModifyDisplay(state, data) {
       state.display = data.display
     },
 
@@ -39,11 +39,12 @@ export default createStore({
 
     UpdateTime(state, data) {
       state.enviar.time = data
+      localStorage.setItem('Cronometro', state.enviar.time.toString())
     },
 
     UpdatePlacar(state, data) {
       state.enviar.point += data 
-      localStorage.setItem('quizPonto', state.enviar.point.toString())
+      localStorage.setItem('Ponto', state.enviar.point.toString())
     }
   },
 
