@@ -1,6 +1,7 @@
 <template>
     <div class="contenter">
         <div class="contenter">
+            <!-- CONTAINER DA DESCRIÇÃO  -->
             <button id="botton-desc" @click="open('box-desc','botton-desc')">
                 Descrição
             </button>
@@ -8,6 +9,7 @@
                 <p> [Vazio] </p>
             </div>
 
+            <!-- CONTAINER DO PASSO A PASSO  -->
             <button id="botton-passo-passo" @click="open('box-passo-passo', 'botton-passo-passo')">
                 Como Jogar
             </button>

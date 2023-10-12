@@ -1,11 +1,6 @@
 <template>
    <div class="container" id="circular">
-        <div class="backdrop">
-            <div class="gradiente">
-
-            </div>
-        </div>
-
+    
         <!-- LOGO -->
         <div class="icon">
             <img src="/imgs/logo-kaia.png" alt="logo" id="img-logo">

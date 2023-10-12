@@ -1,7 +1,7 @@
 <template>
     <div class="container content">
         <div class="space">
-            <!-- ESPAÇO EM BRANCO -->   
+            <!-- ESPAÇO EM BRANCO não mexer -->   
         </div>
         <table class="table">
             <tr class="header">
@@ -30,11 +30,8 @@ export default {
         }
     },
 
-    props : {
-
-    },
-
     methods: {
+        // Alternar as cores das linhas das tabela
         Alternar() {
             const rows = document.querySelectorAll("tr")
              

@@ -1,6 +1,6 @@
 <template>
     <form action="" @submit="Start">
-        <input v-model="username" type="text" id="input-name" maxlength="20" placeholder="seu nome" autofocus>
+        <input v-model="username" type="text" id="input-name" maxlength="20" placeholder="seu nome" autofocus> 
         <input type="submit" value="Jogar" id="submit">
     </form>
 </template>
@@ -11,27 +11,29 @@ export default {
 
     data() {
         return {
-            username : null
+            username : null  // nome do usuário
         }
     }, 
 
     methods : {
         Start(e) {
-            e.preventDefault()
+            e.preventDefault()  // Anula envio do formulário
 
-            if(this.username == null)
+            if(this.username == null)   // Verifica se o usuario digitou algo
             {
-                const input = document.getElementById("input-name")
-                input.style.animation = 'mahoraga .2s infinite alternate'
+                // Adiciona um aviso ( animação ) para preencher o form 
+                const input = document.getElementById("input-name")     
+                input.style.animation = 'mahoraga .2s infinite alternate'   
 
                 setTimeout (() => {
                     input.style.animation = 'none'
                 }, 1000)
             }
-            else
+            else  // Guardar os dados
             {
-                this.$store.commit("GetName", this.username)
-                this.$store.commit('ModifyDisplay', { display : 2 }) // ABRIR MAIN
+                this.$store.commit("GetName", this.username)  // Mutation Vuex
+                this.username = null
+                this.$store.commit('ModifyDisplay', { display : 2 }) // ABRIR MAIN display = 2 
                 localStorage.setItem("Display", this.$store.state.display)
             }
         }

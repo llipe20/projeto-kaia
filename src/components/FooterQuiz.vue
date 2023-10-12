@@ -3,7 +3,7 @@
         <h1>FOOTER AQUI</h1>
 
         <div>
-            {{ $store.state.enviar.name }}
+            {{ $store.state.enviar.player }}
             {{ $store.state.enviar.time }}
             {{ $store.state.enviar.point }}
         </div>
@@ -40,7 +40,7 @@ export default {
     }, 
 
     mounted() {
-        
+       
     }
 }
 </script>

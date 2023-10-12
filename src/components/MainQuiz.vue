@@ -1,6 +1,6 @@
 <template>
   <div class="container" id="fundo">
-    <PerguntaQuiz :index="index" />
+    <PerguntaQuiz :index="index" />     
 
     <RespostaQuiz @modify="ModifyIndex" :index="index" />
 
@@ -18,37 +18,35 @@ export default {
 
   data() {
     return {
-      index: 0,
-      value : localStorage.getItem("Pausa")
-    };
-  },
-
-  methods: {
-    // Add novo valor para index assim que a pergunta for resposdinda
-    ModifyIndex(value) {
-       if (value === true) {
-        this.index += 1
-      } else {
-        this.index = 0
-        this.value = true
-      }
-      localStorage.setItem("Index", this.index)
-    }
-  },
-
-  mounted() {
-    // Recuperar o valor do index do Local Storage 
-    const savedIndex = localStorage.getItem("Index")
-    if (savedIndex !== null) {
-      this.index = parseInt(savedIndex, 10)
+      index: 0    // Var de controle para próxima pergunta, allternativa e etc...
     }
   },
 
   components: {
-    PerguntaQuiz,
-    RespostaQuiz,
-    PlacarQuiz,
-  },
+        PerguntaQuiz,
+        RespostaQuiz,
+        PlacarQuiz,
+    },
+
+    methods: {
+        // Add novo valor para index assim que o $emit for disparado de Resposta.vue
+        ModifyIndex(value) {
+            if (value === true) {
+                this.index += 1
+            } else {
+                this.index = 0
+            }
+            localStorage.setItem("Index", this.index) 
+        }
+    },
+
+    mounted() {
+        // Recuperar o valor do index do Local Storage 
+        const savedIndex = localStorage.getItem("Index")
+        if (savedIndex !== null) {
+            this.index = parseInt(savedIndex, 10)
+        }
+    }
 }
 </script>
 

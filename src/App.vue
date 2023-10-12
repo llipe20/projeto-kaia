@@ -1,68 +1,67 @@
 <template>
   <div class="container box-principal">
-    <HeaderQuiz 
-      v-show="$store.state.display == 1" 
-      v-if="complete"
-    />
+      <HeaderQuiz 
+        v-show="$store.state.display == 1" 
+        v-if="complete"
+      />
 
-    <RankIng 
-      v-show="$store.state.display == 1"
-      v-if="complete"
-    />
+      <RankIng 
+        v-show="$store.state.display == 1"
+        v-if="complete"
+      />
 
-    <MainQuiz 
-      v-show="$store.state.display == 2"
-      v-if="complete"
-    />
+      <MainQuiz 
+        v-show="$store.state.display == 2"
+        v-if="complete"
+      />
 
-    <FooterQuiz 
-      v-show="$store.state.display == 3"
-      v-if="complete"
-    />
+      <FooterQuiz 
+        v-show="$store.state.display == 3"
+        v-if="complete"
+      />
   </div>
 </template>
 
 <script>
-import HeaderQuiz from './components/HeaderQuiz.vue'
-import MainQuiz from './components/MainQuiz.vue'
-import FooterQuiz from './components/FooterQuiz.vue'
-import RankIng from './components/headers/Ranking.vue'
+    import HeaderQuiz from './components/HeaderQuiz.vue'
+    import MainQuiz from './components/MainQuiz.vue'
+    import FooterQuiz from './components/FooterQuiz.vue'
+    import RankIng from './components/headers/Ranking.vue'
 
-export default {
-    name: 'App',
+    export default {
+        name: 'App',
 
     components: {
-      HeaderQuiz,
-      MainQuiz,
-      FooterQuiz,
-      RankIng 
+        HeaderQuiz,
+        MainQuiz,
+        FooterQuiz,
+        RankIng 
     },
 
     data() {
-      return {
-        complete : null
-      }
+        return {
+            complete : null
+        }
     },
 
     methods : {
         async getApi() {
-          const req = await fetch('http://localhost:3000/quiz')
-          const data = await req.json()
-  
-          this.$store.commit("GetQuiz", data)
-          this.complete = true
+            const req = await fetch('http://localhost:3000/quiz')
+            const data = await req.json()
+
+            this.$store.commit("GetQuiz", data)
+            this.complete = true
         }
     },
 
     mounted() {
-       this.getApi()
+        this.getApi()
 
-       if(localStorage.getItem("Display")) {
-          this.$store.state.display = localStorage.getItem("Display")
-       }
+        if(localStorage.getItem("Display")) {
+            this.$store.state.display = localStorage.getItem("Display")
+        }
     }
 }
-
 </script>
 
 <style>
@@ -136,6 +135,10 @@ body {
   width: 100vw;
   max-width: 800px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.496);
+}
+
+.invisible {
+  display: none;
 }
 </style>
 

@@ -22,32 +22,47 @@ export default {
     },
 
     methods: {
+        // Limpar para estilo padrao das alternativas
         Clear(alternate, alternativas) {
             alternate.classList.remove("correta", "errada")
+
+            alternativas.forEach( alter => {
+                if(alter !== alternate) {
+                    alter.classList.remove("invisible")
+                }
+            })
         },
 
         // Validar reposta 
         Verificar(e) {
-            const response = this.$store.state.dados.quiz[this.index].resposta
-            const alternate = e.target.textContent
+            const response = this.$store.state.dados.quiz[this.index].resposta  // resposta certa
+            const todes = document.querySelectorAll(".alternativas")    // todas as alternativas
+            const alternate = e.target.textContent  // valor da alternativa clicada
+
+            todes.forEach( alter => {       // Aplica um estilo as alternativas que não foram clicadas
+                if(alter !== e.target) {
+                    alter.classList.add("invisible")
+                }
+            })
 
             if (response === alternate) {
                 e.target.classList.add("correta")
-                this.$store.commit("UpdatePlacar", this.$store.state.dados.quiz[this.index].valor)
+                this.$store.commit("UpdatePlacar", this.$store.state.dados.quiz[this.index].valor)  // Somando e guardandos os pontos no State
 
             } else {
                 e.target.classList.add("errada")
             }
 
-            setTimeout(() => {
+            // Verificando se há mais perguntas
+            setTimeout(() => {  
                 if (this.index < this.options.length - 1) {
-                    this.$emit("modify", true);
+                    this.$emit("modify", true)  // Disparo para próxima pergunta
                 } else {
-                    this.$emit("modify", false);
-                    this.$store.commit("ModifyDisplay", { display : 3 }) // ABRIR FOOTER
+                    this.$emit("modify", false)
+                    this.$store.commit("ModifyDisplay", { display : 3 }) // ABRIR FOOTER - pag de resultados
                     localStorage.setItem("Display", this.$store.state.display)
                 }
-                this.Clear(e.target)
+                this.Clear(e.target, todes)
             }, 2000)
         }
     },
