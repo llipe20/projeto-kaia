@@ -4,7 +4,7 @@
 
     <RespostaQuiz @modify="ModifyIndex" :index="index" />
 
-    <PlacarQuiz :index="index" :pausar="true"/>
+    <PlacarQuiz :index="index" :pausa="value"/>
   </div>
 </template>
 
@@ -18,7 +18,8 @@ export default {
 
   data() {
     return {
-      index: 0
+      index: 0,
+      value : localStorage.getItem("Pausa")
     };
   },
 
@@ -29,6 +30,7 @@ export default {
         this.index += 1
       } else {
         this.index = 0
+        this.value = true
       }
       localStorage.setItem("Index", this.index)
     }

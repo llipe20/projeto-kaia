@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     display : 1,
+    pausa : null,
 
     dados : {
       quiz : [],
@@ -45,6 +46,11 @@ export default createStore({
     UpdatePlacar(state, data) {
       state.enviar.point += data 
       localStorage.setItem('Ponto', state.enviar.point.toString())
+    },
+
+    UpdatePausa(state, data) {
+      state.pausa = data
+      localStorage.setItem('Pausa', state.pausa)
     }
   },
 

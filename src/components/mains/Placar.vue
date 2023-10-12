@@ -1,42 +1,42 @@
 <template>
-  <div class="container">
-    <div class="container" id="box-placar">
+    <div class="container">
+        <div class="container" id="box-placar">
 
-      <!-- VALOR PONTO -->
-      <div class="container ponto">
-        <h3>Valendo</h3>
-        <h3>+ {{ perguntas[index].valor }} pts</h3>
-      </div>
+        <!-- VALOR PONTO -->
+        <div class="container ponto">
+            <h3>Valendo</h3>
+            <h3>+ {{ perguntas[index].valor }} pts</h3>
+        </div>
 
-      <!-- SOMATÓRIO -->
-      <div class="container">
-        <img src="/imgs/money.png" alt="pontos">
-        <h3> {{ totalPonto }} pts</h3>
-      </div>
+        <!-- SOMATÓRIO -->
+        <div class="container">
+            <img src="/imgs/money.png" alt="pontos">
+            <h3> {{ totalPonto }} pts</h3>
+        </div>
 
-      <!-- TEMPO -->
-      <div class="container">
-        <img src="/imgs/clock.png" alt="tempo">
-        <h3 style="width: 120px;">{{ relogio }} seg</h3>
-      </div>
+        <!-- TEMPO -->
+        <div class="container">
+            <img src="/imgs/clock.png" alt="tempo">
+            <h3 style="width: 120px;">{{ relogio }} seg</h3>
+        </div>
 
-      <!-- DICA -->
-      <div class="container">
-        <button id="gojo" @click="Show">
-          <img src="/imgs/logo-kaia.png" alt="logo-kaia" id="logo">
-        </button>
-        <h3>Dica</h3>
-      </div>
+        <!-- DICA -->
+        <div class="container">
+            <button id="gojo" @click="Show">
+            <img src="/imgs/logo-kaia.png" alt="logo-kaia" id="logo">
+            </button>
+            <h3>Dica</h3>
+        </div>
     </div>
 
     <!-- BOX - DICA // escondido inicialmente -->
     <div class="container invisible" id="box-dica">
-      <p>
-        {{ perguntas[index].dica }}
-      </p>
-      <span class="container" id="sukuna" @click="Show">
-        x
-      </span>
+        <p>
+            {{ perguntas[index].dica }}
+        </p>
+        <span class="container" id="sukuna" @click="Show">
+            x
+        </span>
     </div>
   </div>
 </template>
@@ -47,9 +47,9 @@ export default {
 
   data() {
     return {
-      relogio : parseInt(localStorage.getItem('Cronometro')),
+      relogio: parseInt(localStorage.getItem('Cronometro')),
       perguntas: this.$store.state.dados.quiz,
-      idCronometro : null
+      idCronometro: null
     }
   },
 
@@ -61,6 +61,16 @@ export default {
 
   props: {
     index: Number,
+    pausa: Boolean
+  },
+
+  watch: {
+    pausa() {
+      if(this.pausa == true) {
+        clearTimeout(this.idCronometro)
+        this.$store.commit("UpdatePausa", this.pausa)
+      } 
+    }
   },
 
   methods: {
@@ -88,6 +98,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 

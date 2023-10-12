@@ -22,14 +22,14 @@ export default {
     },
 
     methods: {
-        Clear(alternate) {
+        Clear(alternate, alternativas) {
             alternate.classList.remove("correta", "errada")
         },
 
         // Validar reposta 
         Verificar(e) {
-            const response = this.$store.state.dados.quiz[this.index].resposta;
-            const alternate = e.target.textContent;
+            const response = this.$store.state.dados.quiz[this.index].resposta
+            const alternate = e.target.textContent
 
             if (response === alternate) {
                 e.target.classList.add("correta")
@@ -97,4 +97,5 @@ export default {
         background-color: red;
         animation: mahoraga .2s alternate infinite;
     }
+
 </style>
