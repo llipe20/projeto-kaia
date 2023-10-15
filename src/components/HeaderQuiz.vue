@@ -1,6 +1,6 @@
 <template>
    <div class="container" id="circular">
-    
+
         <!-- LOGO -->
         <div class="icon">
             <img src="/imgs/logo-kaia.png" alt="logo" id="img-logo">
@@ -53,7 +53,7 @@ export default {
 <style scoped>
 
     .container {
-        background-image: linear-gradient(to top, var(--cor-contraste), var(--cor-principal), var(--cor-secundaria));
+        background-image: linear-gradient(to top, var(--cor-contraste), var(--cor-principal));
         position: relative;
         gap: 30px;
         overflow-x: hidden;
@@ -74,6 +74,7 @@ export default {
     }
 
     .icon {
+        display: none;
         width: 25vw;
         max-width: 180px;
         height: 25vw;
@@ -92,17 +93,17 @@ export default {
     }
 
     h1 , h2{
+        margin-top: 30px;
         text-align: center;
         color: rgb(255, 255, 255);
-        margin-top: 30px;
         font: normal 2em var(--font-quiz);
     }
 
     h2 {
         width: 77%;
         margin-bottom: 30px;
-        border-bottom: 4px solid var(--cor-principal);
-        outline: 4px solid var(--cor-principal);
+        border-bottom: 4px solid rgb(189, 186, 186);
+        outline: 3px solid rgb(189, 186, 186);
         border-radius: 15px;
         padding: 10px;
     }
@@ -125,7 +126,7 @@ export default {
         }
 
         h1 {
-            margin-top: 95px;
+            margin-top: 50px;
         }
 
         p {

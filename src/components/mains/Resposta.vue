@@ -97,7 +97,7 @@ export default {
         
     @media (min-width: 800px)
     {
-     .alternativas:focus {
+     .alternativas:hover {
             background-color: var(--cor-contraste);
             transform: scale(1);
         }

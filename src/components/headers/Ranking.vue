@@ -144,7 +144,7 @@ export default {
 
     h3, h4 {
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.386);
-        font: normal 1.5em var(--font-pergunta);
+        font: normal 1.5em 'Arial', sans-serif;
         text-align: center;
         color: white;
     }
@@ -154,7 +154,7 @@ export default {
     }
 
     h4 {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     #pointer {

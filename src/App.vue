@@ -48,6 +48,7 @@
         async getApi() {
             const req = await fetch('http://localhost:3000/quiz')
             const data = await req.json()
+            console.log(data)
 
             this.$store.commit("GetQuiz", data)
             this.complete = true
@@ -116,7 +117,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html::-webkit-scrollbar {
+html::-webkit-scrollbar, .invisible {
     display: none;
 }
 
@@ -133,12 +134,8 @@ body {
 
 .box-principal {
   width: 100vw;
-  max-width: 800px;
+  max-width: 700px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.496);
-}
-
-.invisible {
-  display: none;
 }
 </style>
 

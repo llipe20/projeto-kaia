@@ -114,8 +114,6 @@ export default {
 }
 </script>
 
-
-
 <style scoped>
 
     @keyframes mover-anima {

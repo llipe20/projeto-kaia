@@ -78,6 +78,28 @@
             "resposta" : "alternativa c",
             "valor" : 25,
             "dica" : "dica da pergunta 3"
+        },
+        {
+            "index" : "4",
+            "pergunta" : "pergunta 4",
+            "a" : "alternativa a",
+            "b" : "alternativa b",
+            "c" : "alternativa c",
+            "d" : "alternativa d",
+            "resposta" : "alternativa b",
+            "valor" : 7,
+            "dica" : "dica da pergunta 4"
+        },
+        {
+            "index" : "5",
+            "pergunta" : "pergunta 5",
+            "a" : "alternativa a",
+            "b" : "alternativa b",
+            "c" : "alternativa c",
+            "d" : "alternativa d",
+            "resposta" : "alternativa 5",
+            "valor" : 13,
+            "dica" : "dica da pergunta 5"
         }
     ],
 

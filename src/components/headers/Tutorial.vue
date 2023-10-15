@@ -75,12 +75,12 @@ export default {
     }
 
     button {
-        background-color: transparent;
+        background-color: var(--cor-contraste);
         color: rgb(255, 255, 255);
         font: normal 2em var(--font-quiz);
         border: none;
-        border-bottom: 4px solid var(--cor-contraste);
-        outline: 4px solid var(--cor-contraste);
+        border-bottom: 4px solid rgb(189, 186, 186);
+        outline: 3px solid rgb(189, 186, 186);
         border-radius: 15px;
         padding: 10px;
         width: 60%;

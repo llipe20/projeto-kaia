@@ -57,8 +57,8 @@ export default {
         font: normal 1.8em var(--font-quiz);
         background-color: transparent;
         border: none;
-        border-bottom: 4px solid var(--cor-contraste);
-        outline: 4px solid var(--cor-contraste);
+        border-bottom: 4px solid rgb(189, 186, 186);
+        outline: 3px solid rgb(189, 186, 186);
         color: white;
         text-align: center;
         border-radius: 15px;
@@ -69,8 +69,13 @@ export default {
         margin: auto;
     }
 
+    #input-name, #input-name:focus {
+        background-color: transparent;
+        color: white;
+    }
+
     #submit {
-        background-color: var(--cor-secundaria);
+        background-color: var(--cor-contraste);
         animation: mahoraga .5s infinite alternate;
     }
 

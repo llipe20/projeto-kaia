@@ -7,14 +7,14 @@
             <tr class="header">
                 <td>Rank</td>
                 <td>Jogador</td>
-                <td>Tempo</td>
                 <td>Pontos</td>
+                <td>Tempo</td>
             </tr>
             <tr v-for="dado in dados" :key="dado.id" v-show="dado.id > 3">
                 <td> {{ dado.id }}th</td>
                 <td> {{ dado.name }} </td>
-                <td> {{ dado.time }} seg</td>
                 <td> {{ dado.point }} </td>
+                <td> {{ dado.time }} seg</td>
             </tr>
         </table>
     </div>
