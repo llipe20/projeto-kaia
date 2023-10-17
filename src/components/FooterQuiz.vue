@@ -4,7 +4,7 @@
             <img src="/imgs/trofeu.png" alt="vencedor" id="img-trofeu">
 
             <h1>
-                Parabéns  {{ this.$store.state.enviar.player }} 
+                Parabéns  {{ nome }} 
             </h1>
 
             <p>
@@ -35,17 +35,11 @@ export default {
         }
     },
 
-    props : {
-        
+    computed : {
+        nome() {
+            return this.$store.state.enviar.player
+        }
     },
-
-    methods : {
-       
-    }, 
-
-    mounted() {
-       
-    }
 }
 </script>
 

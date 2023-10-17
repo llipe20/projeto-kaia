@@ -8,18 +8,22 @@
 export default {
     name : 'BottonBack',
 
-    data() {
-        return {
-
-        }
-    },
-
     methods : {
+
+        // Requisição do rankeiamento 
+        async getRanking() {
+            const req = await fetch('http://localhost:3000/ranking')
+            const dados = await req.json()
+    
+            this.$store.commit("GetRanking", dados)
+        },
+
         Close() {
             localStorage.clear()
+            this.getRanking()
             this.$store.commit("ModifyDisplay", { display : 1 }) // ABRIR HEADER
-            const value = - (this.$store.state.enviar.point)
-            this.$store.commit("UpdatePOnto", value)
+            this.$store.commit("UpdatePlacar", 0)
+            this.$store.commit("UpdateAcerto", 0)
         }
     }
 }

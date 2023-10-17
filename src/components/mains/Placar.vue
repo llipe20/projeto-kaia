@@ -59,7 +59,7 @@ export default {
     },
 
     props: {
-        index: Number,
+        index: Number
     },
 
     methods: {
@@ -108,7 +108,6 @@ export default {
     },
 
     mounted() {
-        this.Cronometro()
         this.totalPonto = parseInt(localStorage.getItem('Ponto')) || 0;
     }
 }

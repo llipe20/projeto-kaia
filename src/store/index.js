@@ -13,7 +13,8 @@ export default createStore({
     enviar : {        // Dados para serem enviado ao banco
       player : null,
       time : null,
-      point : 0
+      point : 0,
+      acertos : 0
     }
   },
 
@@ -46,8 +47,17 @@ export default createStore({
 
     // Modificar o PLacar
     UpdatePlacar(state, data) {
-      state.enviar.point += data 
-      localStorage.setItem('Ponto', state.enviar.point.toString())
-    }
+      if(data == 0) {
+        state.enviar.point = data
+        localStorage.setItem('Ponto', state.enviar.point.toString())
+      } else {
+        state.enviar.point += data 
+        localStorage.setItem('Ponto', state.enviar.point.toString())
+      }
+    },
+
+    UpdateAcerto(state, data) {          
+      state.enviar.acertos = data
+    },
   }
 })

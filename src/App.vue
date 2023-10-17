@@ -10,6 +10,11 @@
         v-if="complete"
       />
 
+       <TablePlayer 
+        v-show="$store.state.display == 1"
+        v-if="complete"
+      /> 
+
       <MainQuiz 
         v-show="$store.state.display == 2"
         v-if="complete"
@@ -27,6 +32,7 @@
     import MainQuiz from './components/MainQuiz.vue'
     import FooterQuiz from './components/FooterQuiz.vue'
     import RankIng from './components/headers/Ranking.vue'
+    import TablePlayer from './components/headers/TablePlayer.vue' 
 
     export default {
         name: 'App',
@@ -35,7 +41,8 @@
         HeaderQuiz,
         MainQuiz,
         FooterQuiz,
-        RankIng 
+        RankIng,
+        TablePlayer
     },
 
     data() {
@@ -45,19 +52,31 @@
     },
 
     methods : {
+      // Requisição dados do quiz
         async getApi() {
             const req = await fetch('http://localhost:3000/quiz')
             const data = await req.json()
-            console.log(data)
 
             this.$store.commit("GetQuiz", data)
+        },
+
+        // Requisição do ranqueiamento 
+        async getRanking() {
+            const req = await fetch('http://localhost:3000/ranking')
+            const dados = await req.json()
+            localStorage.setItem("TotPlayer", dados.length)
+    
+            this.$store.commit("GetRanking", dados)
             this.complete = true
         }
     },
 
-    mounted() {
+    created() {
         this.getApi()
+        this.getRanking()
+    },
 
+    mounted() {
         if(localStorage.getItem("Display")) {
             this.$store.state.display = localStorage.getItem("Display")
         }

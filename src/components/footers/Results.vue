@@ -17,7 +17,7 @@
 
                 <div class="container box-title">
                     <span class="text">
-                        {{ TotAcerto }} Acertos
+                        {{ obj.acertos }} Acertos
                     </span>
                 </div>
             </div>
@@ -40,11 +40,24 @@ export default {
 
     data() {
         return {
-            obj : this.$store.state.enviar,
-            TotAcerto : 3
-   
+            obj : this.$store.state.enviar   
         }
     },
+
+    mounted() {
+        /*         if(localStorage.getItem("Display") == 3) {
+            const value = {
+                name : localStorage.getItem("Nome"),
+                point : localStorage.getItem("Ponto"),
+                time : localStorage.getItem("Cronometro"),
+                acertos : localStorage.getItem("Acertos")
+            }
+
+            this.$store.commit("GetName", value.name)
+            this.$store.commit("UpdateTime", value.time)
+            this.$store.commit("UpdateAcerto", value.acertos)
+            this.$store.commit("UpdatePlacar", value.point)   */
+    }
 }
 </script>
 

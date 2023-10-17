@@ -1,144 +1,130 @@
- {
-    "paleta" : [
-        {
-            "principal" : "rgb(1, 66, 130)",
-            "secundaria" : "rgb(1, 1, 186)",
-            "contraste" : "rgb(1, 1, 84)"
-        },
-        {
-            "principal" : "rgb(253, 30, 30)",
-            "secundaria" : "rgb(186, 1, 1)",
-            "contraste" : "rgb(100, 0, 0)"
-        },
-        {
-            "principal" : "rgb(0, 232, 70)",
-            "secundaria" : "rgb(1, 186, 1)",
-            "contraste" : "rgb(0, 100, 0)"
-        },
-        {
-            "principal" : "rgb(223, 215, 1)",
-            "secundaria" : "rgb(206, 1, 1)",
-            "contraste" : "rgb(207, 155, 0)"
-        }
-    ],
-
-    "tutorial" : {
-
-        "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.",
-        
-        "passo" : [
-
-            "1 - Insira seu nome no campo abaixo e aperte em 'Jogar'.",
-
-            "2 - Leia as perguntas com atenção e aperte na alternativa que achar correta.",
-
-            "3 - Caso não saiba a resposta, aperte no botão de 'DICA' e o jogo lhe ajudará nas repostas.",
-
-            "4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies.",
-
-            "5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo.",
-
-            "Boa sorte!"
-        ]
+{
+  "paleta": [
+    {
+      "principal": "rgb(1, 66, 130)",
+      "secundaria": "rgb(1, 1, 186)",
+      "contraste": "rgb(1, 1, 84)"
+    },
+    {
+      "principal": "rgb(253, 30, 30)",
+      "secundaria": "rgb(186, 1, 1)",
+      "contraste": "rgb(100, 0, 0)"
+    },
+    {
+      "principal": "rgb(0, 232, 70)",
+      "secundaria": "rgb(1, 186, 1)",
+      "contraste": "rgb(0, 100, 0)"
+    },
+    {
+      "principal": "rgb(223, 215, 1)",
+      "secundaria": "rgb(206, 1, 1)",
+      "contraste": "rgb(207, 155, 0)"
     }
-        ,
-
-    "quiz" : [
-        {
-            "index" : "1",
-            "pergunta" : "pergunta 1",
-            "a" : "alternativa a",
-            "b" : "alternativa b",
-            "c" : "alternativa c",
-            "d" : "alternativa d",
-            "resposta" : "alternativa d",
-            "valor" : 15,
-            "dica" : "dica da pergunta 1"
-        },
-
-        {
-            "index" : "2",
-            "pergunta" : "'pergunta 2",
-            "a" : "alternativa a",
-            "b" : "alternativa b",
-            "c" : "alternativa c",
-            "d" : "alternativa d",
-            "resposta" : "alternativa a",
-            "valor" : 10,
-            "dica" : "dica da pergunta 2"
-        },
-
-        {
-            "index" : "3",
-            "pergunta" : "'pergunta 3",
-            "a" : "alternativa a",
-            "b" : "alternativa b",
-            "c" : "alternativa c",
-            "d" : "alternativa d",
-            "resposta" : "alternativa c",
-            "valor" : 25,
-            "dica" : "dica da pergunta 3"
-        },
-        {
-            "index" : "4",
-            "pergunta" : "pergunta 4",
-            "a" : "alternativa a",
-            "b" : "alternativa b",
-            "c" : "alternativa c",
-            "d" : "alternativa d",
-            "resposta" : "alternativa b",
-            "valor" : 7,
-            "dica" : "dica da pergunta 4"
-        },
-        {
-            "index" : "5",
-            "pergunta" : "pergunta 5",
-            "a" : "alternativa a",
-            "b" : "alternativa b",
-            "c" : "alternativa c",
-            "d" : "alternativa d",
-            "resposta" : "alternativa 5",
-            "valor" : 13,
-            "dica" : "dica da pergunta 5"
-        }
-    ],
-
-    "ranking" : [
-        {
-            "id" : 1,
-            "name" : "Felipe",
-            "time" : 50,
-            "point" : "8000"
-        },
-        {
-            "id" : 2,
-            "name" : "Robson Silva Araújo",
-            "time" : 501,
-            "point" : "8000"
-        },
-        {
-            "id" : 3,
-            "name" : "Satoru Gojo",
-            "time" : 110,
-            "point" : "500"
-        },
-        {
-            "id" : 4,
-            "name" : "Neymar Jr.",
-            "time" : 26,
-            "point" : "220"
-        },
-        {
-            "id" : 5,
-            "name" : "Mahoraga",
-            "time" : 26,
-            "point" : "600"
-        },
-        {
-            "id" : 6,
-            "name" : "Chopper",
-            "time" : 66,
-            "point" : "780"
-        }
+  ],
+  "tutorial": {
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem temporibus cupiditate quaerat repellendus asperiores labore quam sed porro veniam optio voluptate, reiciendis quisquam illum blanditiis nostrum inventore consequatur nesciunt.",
+    "passo": [
+      "1 - Insira seu nome no campo abaixo e aperte em 'Jogar'.",
+      "2 - Leia as perguntas com atenção e aperte na alternativa que achar correta.",
+      "3 - Caso não saiba a resposta, aperte no botão de 'DICA' e o jogo lhe ajudará nas repostas.",
+      "4 - As perguntas possui pontos com base na dificuldade da mesma, perguntas fáceis valem menos que as difícies.",
+      "5 - O ranqueiamento é calculado com base na quantidade de pontos e no tempo de jogo.",
+      "Boa sorte!"
     ]
+  },
+  "quiz": [
+    {
+      "index": "1",
+      "pergunta": "pergunta 1",
+      "a": "alternativa a",
+      "b": "alternativa b",
+      "c": "alternativa c",
+      "d": "alternativa d",
+      "resposta": "alternativa d",
+      "valor": 15,
+      "dica": "dica da pergunta 1"
+    },
+    {
+      "index": "2",
+      "pergunta": "'pergunta 2",
+      "a": "alternativa a",
+      "b": "alternativa b",
+      "c": "alternativa c",
+      "d": "alternativa d",
+      "resposta": "alternativa a",
+      "valor": 10,
+      "dica": "dica da pergunta 2"
+    },
+    {
+      "index": "3",
+      "pergunta": "'pergunta 3",
+      "a": "alternativa a",
+      "b": "alternativa b",
+      "c": "alternativa c",
+      "d": "alternativa d",
+      "resposta": "alternativa c",
+      "valor": 25,
+      "dica": "dica da pergunta 3"
+    },
+    {
+      "index": "4",
+      "pergunta": "pergunta 4",
+      "a": "alternativa a",
+      "b": "alternativa b",
+      "c": "alternativa c",
+      "d": "alternativa d",
+      "resposta": "alternativa b",
+      "valor": 7,
+      "dica": "dica da pergunta 4"
+    },
+    {
+      "index": "5",
+      "pergunta": "pergunta 5",
+      "a": "alternativa a",
+      "b": "alternativa b",
+      "c": "alternativa c",
+      "d": "alternativa d",
+      "resposta": "alternativa d",
+      "valor": 13,
+      "dica": "dica da pergunta 5"
+    }
+  ],
+  "ranking": [
+    {
+      "id": 1,
+      "name": "Felipe",
+      "time": 50,
+      "point": "8000"
+    },
+    {
+      "id": 2,
+      "name": "Robson Silva Araújo",
+      "time": 501,
+      "point": "8000"
+    },
+    {
+      "id": 3,
+      "name": "Satoru Gojo",
+      "time": 110,
+      "point": "500"
+    },
+    {
+      "id": 4,
+      "name": "Neymar Jr.",
+      "time": 26,
+      "point": "220"
+    },
+    {
+      "id": 5,
+      "name": "Mahoraga",
+      "time": 26,
+      "point": "600"
+    },
+    {
+      "id": 6,
+      "name": "Chopper",
+      "time": 66,
+      "point": "780"
+    }
+  ]
 }

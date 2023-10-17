@@ -33,6 +33,26 @@ export default {
             })
         },
 
+        async AddRegristro() {
+            const value = localStorage.getItem("TotPlayer")
+            const obj = this.$store.state.enviar
+            const registro = {
+                id : parseInt(value) + 1,
+                name : obj.player,
+                time : obj.time,
+                point : obj.point
+            }
+
+            const dataJson = JSON.stringify(registro)
+            const req = await fetch('http://localhost:3000/ranking', {
+                method : 'POST',
+                headers : {'Content-Type' : 'application/json'},
+                body : dataJson
+            })
+            const resposta = await req.json()
+            console.log(resposta)
+        },
+
         // Validar reposta 
         Verificar(e) {
             const response = this.$store.state.dados.quiz[this.index].resposta  // resposta certa
@@ -49,6 +69,11 @@ export default {
                 e.target.classList.add("correta")
                 this.$store.commit("UpdatePlacar", this.$store.state.dados.quiz[this.index].valor)  // Somando e guardandos os pontos no State
 
+                // Acumulando os acertos
+                const value = (this.$store.state.enviar.acertos + 1) 
+                this.$store.commit("UpdateAcerto", value)
+                localStorage.setItem("Acertos", this.$store.state.enviar.acertos)
+
             } else {
                 e.target.classList.add("errada")
             }
@@ -60,15 +85,13 @@ export default {
                 } else {
                     this.$emit("modify", false)
                     this.$store.commit("ModifyDisplay", { display : 3 }) // ABRIR FOOTER - pag de resultados
+
                     localStorage.setItem("Display", this.$store.state.display)
+                    this.AddRegristro()
                 }
                 this.Clear(e.target, todes)
             }, 2000)
         }
-    },
-
-    mounted() {
-
     }
 }
 
@@ -98,7 +121,6 @@ export default {
     @media (min-width: 800px)
     {
      .alternativas:hover {
-            background-color: var(--cor-contraste);
             transform: scale(1);
         }
     }

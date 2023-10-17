@@ -4,7 +4,7 @@
 
     <RespostaQuiz @modify="ModifyIndex" :index="index" />
 
-    <PlacarQuiz :index="index" :pausa="value"/>
+    <PlacarQuiz :index="index"/>
   </div>
 </template>
 

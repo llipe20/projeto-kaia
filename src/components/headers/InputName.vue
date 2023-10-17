@@ -31,6 +31,7 @@ export default {
             }
             else  // Guardar os dados
             {
+                localStorage.setItem("Nome", this.username)
                 this.$store.commit("GetName", this.username)  // Mutation Vuex
                 this.username = null
                 this.$store.commit('ModifyDisplay', { display : 2 }) // ABRIR MAIN display = 2 
